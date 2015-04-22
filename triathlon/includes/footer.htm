@@ -1,0 +1,38 @@
+<div class="clearMyDivs"></div>
+
+<div class="divFooter">
+    <div class="divFooterLeft">
+        <p class="classCopyright">Copyright &copy; 2014</p>
+        <p class="className">Paul Merideth, All Rights Reserved.</p>
+    </div>
+    
+    <div class="divFooterContact">
+        <a href="index.php?p=contact" title="Prison to Prison Contact"
+           class=<?php echo ($page_title=="Prison to Prison Contact") ? 'contactPage' : 'otherPage';?>>Contact
+        </a>
+    </div>
+    
+    <div class="divFooterSitePlan">
+        <a href="index.php?p=sitePlan" title="Prison to Prison Site Plan"
+           class=<?php echo ($page_title=="Prison to Prison Site Plan") ? 'sitePlanPage' : 'otherPage';?>>Site Plan
+        </a>
+    </div>
+    
+    <!--
+    <div class="divFooterResources">
+        <a href="index.php?p=resources" title="Prison to Prison Resources"
+           class=<?php echo ($page_title=="Prison to Prison Resources") ? 'resourcesPage' : 'otherPage';?>>Resources
+        </a>
+    </div>
+    -->
+</div>
+
+
+</div> <!-- Close <div class=divContainer>, opened in header> -->
+</body>
+</html>
+
+
+<?php
+	ob_end_flush();
+?>

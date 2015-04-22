@@ -1,0 +1,46 @@
+</div>   <!-- Closes <div id="Content"> -->
+
+<div id="Menu">
+	<a href="index.php" title="Home Page">Home</a><br />
+
+	<?php #Script 18.2, footer.html, pg. 563
+		//If user logged in, show logout and change password links
+		
+		/* $_SESSION['user_id'] may be coincidentally defined by another application in any Firefox session, which causes this if(isset($_SESSION['user_id'])) statement to be TRUE without having a valid user logged in and the following if($_SESSION['user_level'] to fail, causing an error. I added a check of $_SESSION['user_level'] to 
+		the if() statement to make sure both variable are defined before assuming the current session is an active user who is logged in.  */
+		
+		/* 4-16-2015:  Possible fix:  Add a field to the database for every record which has a unique application id, copy it to the $_SESSION[] array and check for its presence to check if someone is logged into the system */
+		/* if(isset($_SESSION['user_id']) && isset($_SESSION['user_level'])) */
+                                
+		if(isset($_SESSION['app_id']) && $_SESSION['app_id']=='plm_registration')
+		{
+			echo '
+				<a href="logout.php" title="Logout">Logout</a><br />
+				<a href="change_password.php" title="Change Your Password">Change Password</a><br />';
+
+			//If user is admin level, add other links
+                        /* 
+			if($_SESSION['user_level']==1)
+			{
+				echo '<p>User Level = ' . $_SESSION['user_level'] . '</p>';
+				echo '
+					<a href="view_users.php" title="View All Users">View Users</a><br />
+					<a href="Some Admin Page">Some Admin Page</a><br />';
+			}
+                        */
+		}
+		else //User not logged in
+		{
+			echo '
+				<a href="register.php" title="Register for the Site">Register</a><br />
+				<a href="login.php" title="Login">Login</a><br />
+				<a href="forgot_password.php" title="Password Retrieval">Retrieve Password</a><br />';
+		}
+	?>
+</div>  <!-- Close <div id="Menu"> -->
+</body>
+</html>
+
+<?php //Flush buffered output
+	ob_end_flush();
+?>

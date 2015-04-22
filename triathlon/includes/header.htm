@@ -1,0 +1,48 @@
+<?php
+    //Start output buffering & session
+    ob_start();
+    session_start();
+
+    //Check for page title and set to default if not set
+    if(!isset($page_title))
+    {
+    	$page_title='Paul Merideth-Home';
+    }
+?>
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title><?php echo $page_title;?></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="includes/style.css" rel="stylesheet" type="text/css" media="screen"/>        
+    </head>
+    <body>
+    <div class="divContainer">
+        <header class="myHeader">
+            <img class="logo" src="images/logo-3.png" alt="Image not avail">
+            <span class="headerText">Prison to Prison Triathlon</span>
+        </header>
+        <div class="clearMyDivs"></div>
+        
+        <nav class="myNav">
+            <br/>
+            <br/>
+            <ul class="myNavMenu">
+                <li><a href="index.php" title="Prison to Prison Home"
+                       class=<?php echo ($page_title=="Prison to Prison Home") ? 'homePage' : 'otherPage';?>>Home</a></li>
+                <li><a href="index.php?p=route" title="Prison to Prison Route"
+                   class=<?php echo ($page_title=="Prison to Prison Route" ||
+                    $page_title=="Prison to Prison Run Route" ||
+                    $page_title=="Prison to Prison Swim Route" ||
+                    $page_title=="Prison to Prison Bike Route") ? 'routePage' : 'otherPage';?>>Route</a></li>
+                <li><a href="index.php?p=registration" title="Prison to Prison Registration"
+                       class=<?php echo ($page_title=="Prison to Prison Registration") ? 'registrationPage' : 'otherPage';?>>Registration</a></li>
+            </ul>
+        </nav>

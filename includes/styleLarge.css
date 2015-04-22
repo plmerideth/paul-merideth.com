@@ -1,0 +1,1783 @@
+/* CSS for all styles */
+html
+{
+    background-color: #808080;
+}    
+    
+/* HEADER.HTM */
+.myHeader
+{
+	/* border-style: solid; */
+	/* border-radius: 5px; */
+	margin-bottom: 10px;
+	font-family: cursive;
+}
+.myHeader span
+{
+	/* font-size: 60px; */
+	/* font-family: 'Rock Salt', cursive; */
+        font-family: 'tangerine', cursive;
+        font-size: 120px;
+        color: white;
+        text-shadow: 4px 4px 4px #000;
+}
+.myNav
+{
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+/* This code is used to set the menu text color to black is selected. */
+/* header.htm sends a parameter with the class set to selected page. All other pages class='otherPage' */
+.myNav .homePage, .myNav .familyHistoryPage, .myNav .spiritualPage, .myNav .travelPage, .myNav .familySportsPage, .myNav .storiesPage
+{
+    font-family: 'tangerine';
+    margin: 10px 35px 10px 35px;
+    font-size:35px;
+    font-weight: bold;
+    color: #000000;
+    display: inline-block;
+    text-decoration: none;
+    /*
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid #000000;
+    box-shadow: 0 0 18px black;
+    padding: 5px 15px 5px 15px;
+    */
+}
+.myNav .otherPage
+{
+    font-family: 'tangerine';
+    /* background-color: white; */
+    margin: 10px 35px 10px 35px;
+    font-size:35px;
+    font-weight: bold;
+    color: #ffffff;
+    display: inline-block;
+    text-decoration: none;
+    /*
+    border-radius: 5px;
+    border: 2px solid #000000;
+    padding: 5px 15px 5px 15px;
+    */
+}
+.myNav a
+{
+    font-family: 'tangerine';
+    /* background-color: white; */
+    margin: 10px 35px 10px 35px;
+    font-size:35px;
+    font-weight: bold;
+    color: #ffffff;
+    display: inline-block;
+    text-decoration: none;
+    /*
+    border-radius: 5px;
+    border: 2px solid #000000;
+    padding: 5px 15px 5px 15px;
+    */
+}
+.myNav a:hover
+{
+	/*Make border same color as background to appear to disappear without changing button dimensions*/
+	/*
+        border:2px solid #FFFFFF;
+	border-radius: 5px;
+        */
+	/*box-shadow creates glow with hover*/
+	/* box-shadow: 0 0 18px black; */
+	color: #000000;
+}
+#container
+{
+	margin: auto;
+	width: 1200px;
+}
+/* HEADER.HTM-END */    
+
+/* MAIN.INC.PHP */
+.divWelcomeVideo
+{
+    display: block;
+    margin: auto;
+    width: 800px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+.welcomeVideo
+{
+    width: 100%    !important;
+    height: auto   !important;
+}
+.listText
+{
+    font-size: .95em;
+    margin-left: 20px;
+}
+.myImage .paulImage
+{
+	border-radius: 15px;
+	width: 30%;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	float: left;
+}
+.myContent
+{
+    font-family: 'Playfair Display';
+    background-color: #AA3939;
+    border-style: solid;
+    border-radius: 10px;
+    float:left;
+    width: 900px;
+    margin: auto;
+}
+.myContent .mainText
+{
+    color: #FFFFFF;
+    font-size: 1.05em;
+    margin: 20px 10px 10px 20px;
+}
+.myContent .mainSpan
+{
+    color: #ffffff;
+    font-size: .95em;
+    margin: 0;
+    margin-left: 20px;
+}
+.myContent .hello
+{
+/*	margin: auto; */
+}
+.myContent .hello h1
+{
+    font-family: 'tangerine';
+    /* float:left;
+    width: 580px;
+    */
+    margin-right: 20px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 70px;
+    color: #003333;
+}
+.myContent ul
+{
+    color: #ffffff;
+    clear:both;
+}
+.myContent ol
+{
+    color: #ffffff;
+}
+.myContent td
+{
+	border: 1px solid black;
+	padding: 5px;
+	margin-bottom: 20px;
+}
+.myContent th
+{
+	font-size: 35px;
+	padding: 5px;
+}
+.myContent a
+{
+	color:#000000;
+	font-size:.95em;
+	text-decoration: none;
+}
+.myContent a:hover
+{
+	color: #ffffff;
+}
+.myContent .paulImage
+{
+	margin: 2px 20px 10px 2px;
+}
+.sidebarHome
+{
+    font-family: 'Playfair Display';
+    font-size: .95em;
+    float:right;
+    width: 23%;
+    border-style: solid;
+    border-radius: 10px;
+    height: 920px;
+    margin-top: 0;
+}
+.sidebarHome h3
+{
+    text-align: center;
+    font-size: 1.5em;
+}
+.sidebarHome ul
+{
+	margin-left: 20px;
+        margin-top: 10px;
+	padding: 0;
+	text-align: left;
+}
+.sidebarHome h3
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+.FamilyNews
+{
+    background-color: #226666;
+    color: #ffffff;
+    text-align: center;
+    margin: 10px 2px 10px 2px;
+    border-bottom: 2px solid black;
+    border-radius: 10px;
+    height: 170px;
+    overflow: auto;
+    overflow-y:scroll;
+}
+.SpiritualNews
+{
+    background-color: #226666;
+    color: #ffffff;
+    text-align: center;
+    margin: 10px 2px 10px 2px;
+    border-bottom: 2px solid black;
+    border-radius: 10px;
+    height: 170px;
+    overflow: auto;
+    overflow-y:scroll;
+}
+.TravelNews
+{
+    background-color: #226666;
+    color: #ffffff;
+    text-align: center;			
+    margin: 10px 2px 10px 2px;
+    border-bottom: 2px solid black;
+    border-radius: 10px;
+    height: 170px;
+    overflow: auto;
+    overflow-y:scroll;
+}
+.SportsNews
+{
+    background-color: #226666;
+    color: #ffffff;
+    text-align: center;			
+    margin: 10px 2px 10px 2px;
+    border-bottom: 2px solid black;
+    border-radius: 10px;
+    height: 170px;			
+    overflow: auto;
+    overflow-y:scroll;
+}
+.StoryNews
+{
+    background-color: #226666;
+    color: #ffffff;
+    text-align: center;			
+    margin: 10px 2px 10px 2px;
+    border-radius: 10px;
+    height: 170px;			
+    overflow: auto;
+    overflow-y:scroll;
+}
+/* MAIN.INC.PHP - END */
+
+/* FAMILYHISTORY.INC.PHP */
+.familyHistoryContent
+{
+    background-color: #AA3939;
+    border-style: solid;
+    border-radius: 10px;
+    float:left;
+    width: 900px;
+    height: 160px;
+    margin: auto;			
+}
+.familyHistoryBar
+{
+    height: 160px;
+    text-align: center;
+    vertical-align: middle;
+}
+.familyHistoryBar a
+{
+    font-family: 'Playfair Display';
+    font-size: 1.5em;
+    background-color: #ffffff;
+    padding: 5px 15px;
+}
+.familyHistoryBar a:hover
+{
+    /*Make border same color as background to appear to disappear without changing button dimensions*/
+    border:2px solid #FFFFFF;
+    border-radius: 5px;
+    /*box-shadow creates glow with hover*/
+    box-shadow: 0 0 18px black;
+    color: #000000;
+}
+
+.familyHistoryBar img
+{
+    width: 80px;
+}
+.loadThumbnails
+{
+    display: inline-block;
+    text-align: center;
+    margin-top: 55px;
+    padding: 0 5px 0 5px;
+    border: solid black 2px;
+    border-radius: 5px;
+    font-size: 30px;
+    color:black;
+    text-decoration: none;
+}
+.familyHistoryContent img
+{
+	padding: 2px;
+	border: 1px solid black;
+	border-radius: 15px;
+	margin: 5px;
+	vertical-align: middle;
+}
+.familyHistoryPics
+{
+	float: left;
+	border-style:solid;
+	border-radius: 10px;
+	text-align:center;
+	background-color: #AA3939; /* rgb(247, 226, 155); */
+	width: 900px;
+	height: 100px;
+	margin: 20px auto;
+}
+.familyHistoryPics h2
+{
+    font-family: 'Playfair Display';
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #ffffff;
+    margin-top: 30px;
+}
+.familyHistoryPics img
+{
+	padding: 2px;
+	border: 1px solid black;
+	border-radius: 10px;
+	margin: 5px;
+}
+.selectedImg
+{
+	/*Make border same color as background to appear to disappear without changing button dimensions*/
+	border:2px solid #FFFFFF;
+	border-radius: 5px;
+	/*box-shadow creates glow with hover*/
+	box-shadow: 0 0 35px white;
+	color: #000000;
+}
+.sidebarFamily
+{
+    background-color: #226666;
+    color: #ffffff;
+    float:right;
+    width: 23%;
+    border-style: solid;
+    border-radius: 10px;
+    height: 100px;
+    margin-top: 40px;			
+}
+.sidebarFamily h3
+{
+    text-align: center;	
+}
+.outputComment
+{
+    margin: 10px;
+}
+.picCount
+{
+	float: left;
+	margin: 30px 20px 10px 20px;
+	font-size: 25px;
+	color: #ffffff;
+	display: inline-block;
+}
+.myButtonMore a
+{
+    font-family: 'tangerine';
+    font-weight: bold;
+    float: left;
+    margin: 25px 20px 10px 20px;
+    font-size:25px;
+    color: #ffffff;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #000000;
+    padding: 5px 15px 5px 15px;
+}
+.myButtonMore a:hover
+{
+	/*Make border same color as background to appear to disappear without changing button dimensions*/
+	border:2px solid #FFFFFF;
+	border-radius: 5px;
+	/*box-shadow creates glow with hover*/
+	box-shadow: 0 0 18px black;
+	color: #000000;
+}
+/* FAMILYHISTORY.INC.PHP - END */
+
+/* SPIRITUAL.INC.PHP */
+#divChrist
+{
+    font-family: 'Playfair Display';
+    font-size: 15px;
+}
+.classChrist .christImage
+{
+    border-radius: 10px;
+    margin: 20px;
+    margin-bottom: 0;
+}
+.myImage .paulImage
+{
+    border-radius: 10px;
+    width: 30%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    float: left;
+}
+.mySpiritualContent
+{
+    background-color: #AA3939;
+    border-style: solid;
+    border-radius: 10px;
+    float:left;
+    width: 900px;
+    height: 600px;
+    margin: auto;
+    overflow: auto;
+    overflow-y: scroll;  /* Force vertical scroll bar to avoid screen shift */
+}
+.mySpiritualContent .hello
+{
+    font-family: 'tangerine';
+    color: #ffffff;
+    text-align: center;
+    font-size: 25px;
+}
+.mySpiritualContent .hello h1
+{
+    margin-bottom: 10px;
+}
+.mySpiritualContent .mainText
+{
+    font-family: 'Playfair Display';
+    color: #ffffff;
+    font-size: 25px;
+    margin: 20px 10px 10px 20px;
+}
+.sidebarSpiritual
+{
+    background-color: #226666;
+    float:right;
+    width: 23%;
+    border-style: solid;
+    border-radius: 15px;
+    height: 600px;
+    margin-top: 0px;
+    overflow: auto;
+}
+.sidebarSpiritual a
+{
+    margin: 0px 20px 5px 20px;
+    font-size:.75em;
+    color: #ffffff;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #000000;
+    padding: 5px 15px 5px 15px;
+}
+.sidebarSpiritual a:hover
+{
+    /*Make border same color as background to appear to disappear without changing button dimensions*/
+    border:2px solid #000000;
+    border-radius: 5px;
+    /*box-shadow creates glow with hover*/
+    box-shadow: 0 0 18px black;
+    color: #ffffff;
+}
+.selectedTopic
+{
+    /*Make border same color as background to appear to disappear without changing button dimensions*/
+    border:2px solid #000000;
+    border-radius: 5px;
+    /*box-shadow creates glow with hover*/
+    box-shadow: 0 0 35px blue;
+    color: #ffffff;
+}	
+.topicTitle
+{
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 2px 15px 2px;
+    height: 20px;
+}
+.topicButton
+{
+    margin: 0;
+}
+.topicButton:hover
+{
+    border:2px solid #FFFFFF;
+    border-radius: 5px;
+    /*box-shadow creates glow with hover*/
+    box-shadow: 0 0 18px black;
+    color: #000000;		
+}
+.topicMyConversion
+{
+    font-size: 20px;
+    text-align: center;
+    margin: 0px 2px 15px 2px;
+    height: 40px;
+    border-bottom: 2px solid black;
+}
+.topicHeading
+{
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 2px 5px 2px;
+    height: 50px;	
+}
+.topicFDREL200
+{
+    font-size: 20px;
+    text-align: center;
+    margin: 15px 2px 5px 2px;
+    height: 25px;
+}
+.topicFDREL200Bottom /* Bottom topic, which needs a bottom border */
+{
+    font-size: 20px;
+    text-align: center;
+    margin: 15px 2px 5px 2px;
+    height: 25px;
+    border-bottom: 2px solid black;
+    padding-bottom: 15px;
+}
+.proclamation
+{
+    float: left;
+    margin-right: 20px;
+}
+#divSpiritualMainText .general
+{
+    font-family: 'Playfair Display';
+    color: #FFFFFF;
+    font-size: .95em;
+}
+#divSpiritualMainText .procText
+{
+    font-family: 'Playfair Display';
+    color: #000000;
+    font-style: italic;
+    font-weight: bold;
+    font-size: .95em;
+}
+#divSpiritualMainText .talkTitle
+{
+    font-family: 'Playfair Display';
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+#divSpiritualMainText .talkAuthor
+{
+    font-family: 'Playfair Display';
+    font-size: .95em;
+    font-style: italic;
+    margin-top: 0;
+    margin-left: 20px;
+}
+#divSpiritualMainText .talkQuote
+{
+    font-family: 'Playfair Display';
+    font-size: .95em;
+    font-style: italic;
+    font-weight: bold;
+    color: #000000;
+}
+#divSpiritualMainText ul, #divSpiritualMainText ol
+{
+    font-family: 'Playfair Display';
+    font-size: .95em;
+    color: #ffffff;
+}
+#divPara1 p, #divPara2 p, #divPara3 p, #divPara4 p, #divPara6 p, #divPara8 p, #divMyConversion p
+{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+ul, ol
+{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+/* SPIRITUAL.INC.PHP - END */
+
+/* FOOTER.INC.PHP */
+.divMyFooter
+{
+    font-family: 'Playfair Display';
+    /*
+    background-color: #AA3939;
+    border-style: solid;
+    border-radius: 10px;
+    */
+    clear:both;
+    margin-top: 5px;
+    height: 70px;
+}
+.divMyFooterLeft
+{
+    float: left;
+    width: 350px;
+}
+.divMyFooterLeft .classCopyright
+{
+    font-size: 15px;
+    color: #ffffff;
+    margin: 10px 150px 5px 10px;
+}
+.divMyFooterLeft .className
+{
+    float: left;
+    clear:left;
+    font-size: 15px;
+    color: #ffffff;
+    margin: 0 0 10px 10px;
+}
+.divMyFooterCenter
+{
+    float: left;
+    width: 500px;
+    font-size: 15px;
+    margin-top: 30px;
+    margin-left: 0;	
+}
+.divMyFooterCenter a
+{
+    font-family: 'Playfair Display';
+    margin: 10px 20px 10px 5px;
+    font-size:.75em;
+    background-color: #ffffff;
+    color: #000000;
+    display: inline;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #000000;
+    padding: 5px 15px 5px 15px;
+    /* box-shadow: 0 0 18px blue; */
+}
+.divMyFooterCenter a:hover
+{
+    /*Make border same color as background to appear to disappear without changing button dimensions*/
+    border:2px solid #000000;
+    border-radius: 5px;
+    /*box-shadow creates glow with hover*/
+    box-shadow: 0 0 30px black;
+    color: #000000;
+}
+.divMyFooterRight
+{
+    float: right;
+    width: 275px;
+}
+.divMyFooterRight .classDesign
+{
+    margin: 10px 0 5px 0;
+    font-size: 15px;
+    color: #ffffff;
+}
+.divMyFooterRight .myName
+{
+    margin: 0 10px 0 0;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.clearMyDivs 
+{
+    /* This div is between main content (floated) and footer.  Because floated divs are ignored, this invisible, non-floated div provides something for the footer margin to be applied to. */
+    clear:both;
+}
+.addDiv
+{
+    clear:left;
+}
+.underConstruction
+{
+    float: right;
+    margin-top: 10px;
+    margin-right: 60px;
+}
+/* FOOTER.INC.PHP - END */
+
+
+/* TEACHING-PRESENTATION.INC.PHP */
+.teaching
+{
+    width: 1200px;
+    border: 2px solid black;
+    background-color: #AA3939;
+    margin: auto;
+    border-radius: 10px;    
+}
+.teaching h1
+{
+    margin: 20px;
+    color: #ffffff;
+}
+.teaching .mainText
+{
+    margin: 20px;
+    color:#FFFFFF;    
+}
+.divTeachingPresentation
+{
+    margin: auto;
+    width: 800px;
+}
+.imgTeachingPresentation
+{
+    width: 700px;
+    display: block;
+    margin: auto;
+}
+/* END TEACHING-PRESENTATION.INC.PHP */
+
+/* TRAVEL.INC.PHP */
+.travel
+{
+    width: 1200px;
+    border: 2px solid black;
+    background-color: #AA3939;
+    margin: auto;
+    border-radius: 10px;    
+}
+.travel h1
+{
+    margin: 20px;
+    color: #ffffff;
+}
+.travel .mainText
+{
+    margin: 20px;
+    color:#FFFFFF;    
+}
+.divTravel
+{
+    margin: auto;
+    width: 800px;
+}
+.imgTravel
+{
+    width: 700px;
+    display: block;
+    margin: auto;
+}
+/* END TRAVEL.INC.PHP */
+
+
+/* FAMILYSPORTS.INC.PHP */
+.familySports
+{
+    width: 1200px;
+    border: 2px solid black;
+    background-color: #AA3939;
+    margin: auto;
+    border-radius: 10px;    
+}
+.familySports h1
+{
+    margin: 20px;
+    color: #ffffff;
+}
+.familySports .imgText
+{
+    font-size: 2em;
+    margin: 20px;
+    color: #FFFFFF;
+    border-top: 8px double black;
+}
+.familySports .mainText
+{
+    margin: 20px;
+    color:#FFFFFF;    
+}
+.divFamilySports
+{
+    margin: auto;
+    width: 800px;
+}
+.imgFamilySports
+{
+    width: 700px;
+    display: block;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+/* END FAMILYSPORTS.INC.PHP */
+
+
+/* STORIES.INC.PHP */
+.stories
+{
+    width: 1200px;
+    border: 2px solid black;
+    background-color: #AA3939;
+    margin: auto;
+    border-radius: 10px;    
+}
+.stories h1
+{
+    margin: 20px;
+    color: #ffffff;
+}
+.stories .mainText
+{
+    margin: 20px;
+    color:#FFFFFF;    
+}
+.divStories
+{
+    margin: auto;
+    width: 800px;
+}
+.imgStories
+{
+    width: 700px;
+    display: block;
+    margin: auto;
+}
+.divStoriesAudio
+{
+    margin: auto;
+}
+.storiesAudio
+{
+    margin: 20px;
+}
+/* END STORIES.INC.PHP */
+
+
+/* SITE-PLAN.INC.PHP */
+.sitePlan  /* Main div */
+{
+    width: 1200px;
+    border: 2px solid black;
+    background-color: #AA3939;
+    margin: auto;
+    border-radius: 10px;
+}
+.sitePlan h1
+{
+    margin: 20px;
+    color: #ffffff;
+}
+.docTitle
+{
+    text-align: center;
+    color: #003333;
+    font-size: 50px;
+}
+.sitePlan h2
+{
+    margin: 20px;
+    color: #FFFFFF;
+}
+.sitePlan .mainText
+{
+    margin: 20px;
+    color:#FFFFFF;
+}
+.sitePlan .italicText
+{
+    font-style: italic;
+    margin: 20px;
+    color: #ffffff;
+}
+.sitePlan .boldText
+{
+    font-weight: bold;
+    margin: 20px;
+    color: #FFFFFF;
+}
+.sitePlan table, th, td
+{
+    margin: 15px;
+    border: 2px solid black;
+    background-color: tan;
+}
+.sitePlan ol, ul
+{
+    color: #ffffff;
+}
+.divSiteDiagram
+{
+    margin: auto;
+    width: 800px;
+}
+.imgSiteDiagram
+{
+    display: block;
+    width: 700px;
+    margin: auto;
+}
+.divSiteLogo
+{
+    margin: auto;
+    width: 800px;
+}
+.imgSiteLogo
+{
+    width: 700px;
+    margin: auto;
+}
+.divSiteColors
+{
+    margin: auto;
+    width: 800px;
+}
+.imgSiteColors
+{
+    width: 700px;
+    margin: auto;
+}
+.divSiteTemplates
+{
+    margin: auto;
+    width: 800px;
+}
+.imgSiteTemplates
+{
+    width: 700px;
+    margin: auto;
+}
+.spanText
+{
+    font-weight: normal;
+}
+/* END SITE-PLAN.INC.PHP
+
+
+
+
+
+
+
+
+/* Begin CSS for medium size screens */
+@media all and (min-width: 481px) and (max-width: 999px)
+{
+/* HEADER.HTM */
+.myHeader span
+{
+    /* font-family: 'tangerine', cursive; */
+    font-size: 90px; /* change */
+}
+
+.myNav
+{
+    width: 700px; /* Changed */
+}
+
+/* This code is used to set the menu text color to black is selected. */
+/* header.htm sends a parameter with the class set to selected page. All other pages class='otherPage' */
+.myNav .homePage, .myNav .familyHistoryPage, .myNav .spiritualPage, .myNav .travelPage, .myNav .familySportsPage, .myNav .storiesPage
+{
+    margin: 10px 10px 10px 10px; /* changed */
+    font-size:25px; /* changed */
+}
+.myNav .otherPage
+{
+    /* background-color: white; */
+    margin: 10px 10px 10px 10px; /* changed */
+    font-size:25px; /* Changed */
+}
+.myNav a
+{
+    /* background-color: white; */
+    margin: 10px 10px 10px 10px; /* changed */
+    font-size:25px; /* changed */
+}
+
+#container
+{
+	margin: auto;
+	width: 700px; /* changed */
+}
+
+/* END HEADER.HTM */
+
+
+/* MAIN.INC.PHP */
+.divWelcomeVideo
+{
+    display: block;
+    margin: auto;
+    width: 500px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+.welcomeVideo
+{
+    width: 100%    !important;
+    height: auto   !important;
+}
+.listText
+{
+    font-size: .95em;
+    margin-left: 20px;
+}
+.myImage .paulImage
+{
+	border-radius: 15px;
+	width: 30%;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	float: left;
+}
+.myContent
+{
+    font-family: 'Playfair Display';
+    background-color: #AA3939;
+    border-style: solid;
+    border-radius: 10px;
+    float:left;
+    width: 525px; /* change */
+    margin: auto;
+}
+.myContent .mainText
+{
+    color: #FFFFFF;
+    font-size: 1.05em;
+    margin: 20px 10px 10px 20px;
+}
+.myContent .mainSpan
+{
+    color: #ffffff;
+    font-size: .95em;
+    margin: 0;
+    margin-left: 20px;
+}
+.myContent .hello
+{
+/*	margin: auto; */
+}
+.myContent .hello h1
+{
+    font-family: 'tangerine';
+    float:left;
+    width: 580px;
+    margin-right: 20px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 50px;
+    color: #003333;
+}
+.myContent ul
+{
+    color: #ffffff;
+    clear:both;
+}
+.myContent ol
+{
+    color: #ffffff;
+}
+.myContent td
+{
+	border: 1px solid black;
+	padding: 5px;
+	margin-bottom: 20px;
+}
+.myContent th
+{
+	font-size: 35px;
+	padding: 5px;
+}
+.myContent a
+{
+	color:#000000;
+	font-size:.95em;
+	text-decoration: none;
+}
+.myContent a:hover
+{
+	color: #ffffff;
+}
+.myContent .paulImage
+{
+	margin: 2px 20px 10px 2px;
+}
+.sidebarHome
+{
+    font-family: 'tangerine';
+    font-size: .95em;
+    float:right;
+    width: 20%;
+    border-style: solid;
+    border-radius: 10px;
+    height: 1000px;
+    margin-top: 0;
+    margin-right: 10px;
+}
+.sidebarHome h3
+{
+    text-align: center;
+    font-size: 1.5em;
+}
+.sidebarHome ul
+{
+	margin-left: 20px;
+        margin-top: 10px;
+	padding: 0;
+	text-align: left;
+}
+.sidebarHome h3
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+.FamilyNews
+{
+    background-color: #226666;
+    color: #ffffff;
+    text-align: center;
+    margin: 10px 2px 10px 2px;
+    border-bottom: 2px solid black;
+    border-radius: 10px;
+    height: 188px;
+    overflow: auto;
+    overflow-y:scroll;
+}
+.SpiritualNews
+{
+    background-color: #226666;
+    color: #ffffff;
+    text-align: center;
+    margin: 10px 2px 10px 2px;
+    border-bottom: 2px solid black;
+    border-radius: 10px;
+    height: 188px;
+    overflow: auto;
+    overflow-y:scroll;
+}
+.TravelNews
+{
+    background-color: #226666;
+    color: #ffffff;
+    text-align: center;			
+    margin: 10px 2px 10px 2px;
+    border-bottom: 2px solid black;
+    border-radius: 10px;
+    height: 188px;
+    overflow: auto;
+    overflow-y:scroll;
+}
+.SportsNews
+{
+    background-color: #226666;
+    color: #ffffff;
+    text-align: center;			
+    margin: 10px 2px 10px 2px;
+    border-bottom: 2px solid black;
+    border-radius: 10px;
+    height: 188px;			
+    overflow: auto;
+    overflow-y:scroll;
+}
+.StoryNews
+{
+    background-color: #226666;
+    color: #ffffff;
+    text-align: center;			
+    margin: 10px 2px 10px 2px;
+    border-radius: 10px;
+    height: 188px;			
+    overflow: auto;
+    overflow-y:scroll;
+}
+/* MAIN.INC.PHP - END */
+
+
+
+/* FAMILYHISTORY.INC.PHP */
+.familyHistoryContent
+{
+    background-color: #AA3939;
+    border-style: solid;
+    border-radius: 10px;
+    float:left;
+    width: 550px; /* changed */
+    height: 90px; /* changed */
+    margin: auto;			
+}
+.familyHistoryBar
+{
+    height: 160px;
+    text-align: center;
+    vertical-align: middle;
+}
+.familyHistoryBar a
+{
+    font-family: 'Playfair Display';
+    font-size: 1.5em;
+    background-color: #ffffff;
+    padding: 5px 15px;
+}
+.familyHistoryBar a:hover
+{
+    /*Make border same color as background to appear to disappear without changing button dimensions*/
+    border:2px solid #FFFFFF;
+    border-radius: 5px;
+    /*box-shadow creates glow with hover*/
+    box-shadow: 0 0 18px black;
+    color: #000000;
+}
+.familyHistoryBar img
+{
+    width: 40px; /* changed */
+}
+.loadThumbnails
+{
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+    padding: 0 5px 0 5px;
+    border: solid black 2px;
+    border-radius: 5px;
+    font-size: 30px;
+    color:black;
+    text-decoration: none;
+}
+.familyHistoryContent img
+{
+	padding: 2px;
+	border: 1px solid black;
+	border-radius: 15px;
+	margin: 5px;
+	vertical-align: middle;
+}
+.familyHistoryPics
+{
+	float: left;
+	border-style:solid;
+	border-radius: 10px;
+	text-align:center;
+	background-color: #AA3939; /* rgb(247, 226, 155); */
+	width: 550px; /* changed */
+	height: 100px;
+	margin: 20px auto;
+}
+.familyHistoryPics h2
+{
+    font-family: 'Playfair Display';
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #ffffff;
+    margin-top: 30px;
+}
+.familyHistoryPics img
+{
+	padding: 2px;
+	border: 1px solid black;
+	border-radius: 10px;
+	margin: 5px;
+}
+.selectedImg
+{
+	/*Make border same color as background to appear to disappear without changing button dimensions*/
+	border:2px solid #FFFFFF;
+	border-radius: 5px;
+	/*box-shadow creates glow with hover*/
+	box-shadow: 0 0 35px white;
+	color: #000000;
+}
+.sidebarFamily
+{
+    background-color: #226666;
+    color: #ffffff;
+    float:right;
+    width: 15%; /* changed */
+    border-style: solid;
+    border-radius: 10px;
+    height: 100px;
+    margin-top: 20px; /* changed */
+    margin-right: 25px; /* changd */
+}
+.sidebarFamily h3
+{
+    text-align: center;	
+}
+.outputComment
+{
+    margin: 10px;
+}
+.picCount
+{
+	float: left;
+	margin: 5px 5px 5px 5px;
+	font-size: 15px;
+	color: #ffffff;
+	display: inline-block;
+}
+.myButtonMore a
+{
+    font-family: 'tangerine';
+    font-weight: bold;
+    float: left;
+    margin: 5px 10px 5px 10px;
+    font-size:15px;
+    color: #ffffff;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #000000;
+    padding: 5px 15px 5px 15px;
+}
+.myButtonMore a:hover
+{
+	/*Make border same color as background to appear to disappear without changing button dimensions*/
+	border:2px solid #FFFFFF;
+	border-radius: 5px;
+	/*box-shadow creates glow with hover*/
+	box-shadow: 0 0 18px black;
+	color: #000000;
+}
+/* FAMILYHISTORY.INC.PHP - END */
+
+/* SPIRITUAL.INC.PHP */
+#divChrist
+{
+    font-family: 'Playfair Display';
+    font-size: 15px;
+}
+.classChrist .christImage
+{
+    width: 430px;
+    border-radius: 10px;
+    margin: 20px;
+    margin-bottom: 0;
+}
+.myImage .paulImage
+{
+    border-radius: 10px;
+    width: 30%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    float: left;
+}
+.mySpiritualContent
+{
+    background-color: #AA3939;
+    border-style: solid;
+    border-radius: 10px;
+    float:left;
+    width: 500px;
+    height: 600px;
+    margin: auto;
+    overflow: auto;
+    overflow-y: scroll;  /* Force vertical scroll bar to avoid screen shift */
+}
+.mySpiritualContent .hello
+{
+    font-family: 'tangerine';
+    color: #ffffff;
+    text-align: center;
+    font-size: 25px;
+}
+.mySpiritualContent .hello h1
+{
+    margin-bottom: 10px;
+}
+.mySpiritualContent .mainText
+{
+    font-family: 'Playfair Display';
+    color: #ffffff;
+    font-size: 25px;
+    margin: 20px 10px 10px 20px;
+}
+.sidebarSpiritual
+{
+    background-color: #226666;
+    float:right;
+    width: 23%;
+    border-style: solid;
+    border-radius: 15px;
+    height: 600px;
+    margin-top: 0px;
+    overflow: auto;
+}
+.sidebarSpiritual a
+{
+    margin: 0px 10px 5px 10px;
+    font-size:.50em;
+    color: #ffffff;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #000000;
+    padding: 5px 10px 5px 10px;
+}
+.sidebarSpiritual a:hover
+{
+    /*Make border same color as background to appear to disappear without changing button dimensions*/
+    border:2px solid #000000;
+    border-radius: 5px;
+    /*box-shadow creates glow with hover*/
+    box-shadow: 0 0 18px black;
+    color: #ffffff;
+}
+.selectedTopic
+{
+    /*Make border same color as background to appear to disappear without changing button dimensions*/
+    border:2px solid #000000;
+    border-radius: 5px;
+    /*box-shadow creates glow with hover*/
+    box-shadow: 0 0 35px blue;
+    color: #ffffff;
+}	
+.topicTitle
+{
+    text-align: center;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px 2px 15px 2px;
+    height: 20px;
+}
+.topicButton
+{
+    margin: 0;
+}
+.topicButton:hover
+{
+    border:2px solid #FFFFFF;
+    border-radius: 5px;
+    /*box-shadow creates glow with hover*/
+    box-shadow: 0 0 18px black;
+    color: #000000;		
+}
+.topicMyConversion
+{
+    font-size: 20px;
+    text-align: center;
+    margin: 0px 2px 15px 2px;
+    height: 40px;
+    border-bottom: 2px solid black;
+}
+.topicHeading
+{
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 2px 5px 2px;
+    height: 50px;	
+}
+.topicFDREL200
+{
+    font-size: 20px;
+    text-align: center;
+    margin: 15px 2px 5px 2px;
+    height: 25px;
+}
+.topicFDREL200Bottom /* Bottom topic, which needs a bottom border */
+{
+    font-size: 20px;
+    text-align: center;
+    margin: 15px 2px 5px 2px;
+    height: 25px;
+    border-bottom: 2px solid black;
+    padding-bottom: 15px;
+}
+.proclamation
+{
+    float: left;
+    margin-right: 20px;
+}
+#divSpiritualMainText .general
+{
+    font-family: 'Playfair Display';
+    color: #FFFFFF;
+    font-size: .95em;
+}
+#divSpiritualMainText .procText
+{
+    font-family: 'Playfair Display';
+    color: #000000;
+    font-style: italic;
+    font-weight: bold;
+    font-size: .95em;
+}
+#divSpiritualMainText .talkTitle
+{
+    font-family: 'Playfair Display';
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+#divSpiritualMainText .talkAuthor
+{
+    font-family: 'Playfair Display';
+    font-size: .95em;
+    font-style: italic;
+    margin-top: 0;
+    margin-left: 20px;
+}
+#divSpiritualMainText .talkQuote
+{
+    font-family: 'Playfair Display';
+    font-size: .95em;
+    font-style: italic;
+    font-weight: bold;
+    color: #000000;
+}
+#divSpiritualMainText ul, #divSpiritualMainText ol
+{
+    font-family: 'Playfair Display';
+    font-size: .95em;
+    color: #ffffff;
+}
+#divPara1 p, #divPara2 p, #divPara3 p, #divPara4 p, #divPara6 p, #divPara8 p, #divMyConversion p
+{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+ul, ol
+{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+/* SPIRITUAL.INC.PHP - END */
+
+
+/* SITE-PLAN.INC.PHP */
+.sitePlan  /* Main div */
+{
+    width: 700px;
+}
+.divSiteDiagram
+{
+    width: 600px;
+}
+.imgSiteDiagram
+{
+    width: 550px;
+}
+.divSiteLogo
+{
+    width: 600px;
+}
+.imgSiteLogo
+{
+    width: 550px;
+}
+.divSiteColors
+{
+    width: 600px;
+}
+.imgSiteColors
+{
+    width: 550px;
+}
+.divSiteTemplates
+{
+    width: 600px;
+}
+.imgSiteTemplates
+{
+    width: 550px;
+}
+/* END SITE-PLAN.INC.PHP */
+
+
+
+/* FOOTER.INC.PHP */
+.divMyFooter
+{
+    font-family: 'Playfair Display';
+    /*
+    background-color: #AA3939;
+    border-style: solid;
+    border-radius: 10px;
+    */
+    width: 700px;
+    clear:both;
+    margin-top: 5px;
+    height: 70px;
+}
+.divMyFooterLeft
+{
+    float: left;
+    width: 185px; /* changed */
+}
+.divMyFooterLeft .classCopyright
+{
+    font-size: 10px; /* changed */
+    color: #ffffff;
+    margin: 10px 90px 5px 10px;
+}
+.divMyFooterLeft .className
+{
+    float: left;
+    clear:left;
+    font-size: 10px; /* changed */
+    color: #ffffff;
+    margin: 0 0 10px 10px;
+}
+.divMyFooterCenter
+{
+    float: left;
+    width: 275px; /* changed */
+    font-size: 10px; /* changed */
+    margin-top: 20px;
+    margin-left: 0;	
+}
+.divMyFooterCenter a
+{
+    font-family: 'Playfair Display';
+    margin: 0px 5px 10px 5px;
+    font-size:.75em;
+    background-color: #ffffff;
+    color: #000000;
+    display: inline;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #000000;
+    padding: 5px 15px 5px 15px;
+    /* box-shadow: 0 0 18px blue; */
+}
+.divMyFooterCenter a:hover
+{
+    /*Make border same color as background to appear to disappear without changing button dimensions*/
+    border:2px solid #000000;
+    border-radius: 5px;
+    /*box-shadow creates glow with hover*/
+    box-shadow: 0 0 30px black;
+    color: #000000;
+}
+.divMyFooterRight
+{
+    float: right;
+    width: 175px; /* changed */
+}
+.divMyFooterRight .classDesign
+{
+    margin: 10px 0 5px 0;
+    font-size: 10px;
+    color: #ffffff;
+}
+.divMyFooterRight .myName
+{
+    margin: 0 10px 0 0;
+    font-size: 10px; /* changed */
+    color: #ffffff;
+}
+
+.clearMyDivs 
+{
+    /* This div is between main content (floated) and footer.  Because floated divs are ignored, this invisible, non-floated div provides something for the footer margin to be applied to. */
+    clear:both;
+}
+.addDiv
+{
+    clear:left;
+}
+.underConstruction
+{
+    float: right;
+    margin-top: 10px;
+    margin-right: 60px;
+}
+/* FOOTER.INC.PHP - END */
+
+/* TEACHING-PRESENTATION.INC.PHP */
+.teaching
+{
+    width: 700px;
+}
+.divTeachingPresentation
+{
+    width: 600px;
+}
+.imgTeachingPresentation
+{
+    width: 550px;
+}
+
+/* TRAVEL.INC.PHP */
+.travel
+{
+    width: 700px;
+}
+.divTravel
+{
+    width: 600px;
+}
+.imgTravel
+{
+    width: 550px;
+}
+/* END TRAVEL.INC.PHP */
+
+
+/* FAMILYSPORTS.INC.PHP */
+.familySports
+{
+    width: 700px;
+}
+.divFamilySports
+{
+    width: 600px;
+}
+.imgFamilySports
+{
+    width: 550px;
+}
+/* END FAMILYSPORTS.INC.PHP */
+
+
+/* STORIES.INC.PHP */
+.stories
+{
+    width: 700px;
+}
+.divStories
+{
+    width: 600px;
+}
+.imgStories
+{
+    width: 550px;
+}
+/* END STORIES.INC.PHP */
+
+} /* End @media for medium screens */

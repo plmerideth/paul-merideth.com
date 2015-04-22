@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>Alarm Clock</title>
+	<style>
+		h1
+		{
+			text-align: center;
+			color: red;
+		}
+		.timer1
+		{
+			float:left;
+			text-align:center;
+			width:75px;
+			border-style: double;
+			margin-left: 200px;
+			font-size: 50px;
+		}
+		.stopTimer1Div
+		{
+			float:left;
+			clear: left;
+			width: 200px;
+			margin-left: 160px;
+			margin-top: 20px;
+		}
+		.timer2
+		{
+			float:right;
+			text-align: center;
+			width:75px;
+			border-style: double;
+			margin-right: 200px;
+			font-size: 50px;
+		}
+		.stopTimer2Div
+		{
+			float: right;
+			display:inline-block;
+			width: 200px;
+			margin-right: 120px;
+			margin-top: 20px;
+			
+		}
+		.getInput
+		{
+			font-size: 20px;
+		}
+		.inputBox
+		{
+			width: 100px;
+		}
+	</style>
+	<script>
+
+		/*DEFINING TABLE
+		*  INPUT
+		*    User enters number of milliseconds to increment counters.  Must be 
+		*    between 1 and 500 milliseconds.
+		*    User clicks "Start Timers" button
+		*    User clicks "Stop Timer One" button as desired
+		*    User clicks "Stop Timer Two" button trying to match timer 1
+		*  PROCESSING
+		*    Calculate difference between button clicks
+		*  OUTPUT
+		*    Display difference in time.
+		*/
+
+		window.addEventListener('load', init, false);
+
+		var counter1=0, counter2=0;
+		var mSec, timer1Timeout, timer2Timeout;
+		var firstTime=true, reset=false;
+	
+		function init()
+		{
+			document.getElementById('startButton').addEventListener('click', timer1, false);
+			document.getElementById('startButton').addEventListener('click', timer2, false);
+			document.getElementById('stopTimer1').addEventListener('click', stopT1, false);
+			document.getElementById('stopTimer2').addEventListener('click', stopT2, false);
+			document.getElementById('resetButton').addEventListener('click', resetTimers, false);		
+		}
+
+
+		function resetTimers()
+		{
+			//document.getElementById('milliSeconds').value="";
+			document.getElementById('startButton').addEventListener('click', timer1, false);
+			document.getElementById('startButton').addEventListener('click', timer2, false);
+			firstTime=true;
+			reset=true;
+			counter1=0;
+			counter2=0;
+			document.getElementById('timer1Display').innerHTML = counter1;
+			document.getElementById('timer2Display').innerHTML = counter2;
+			document.getElementById("outputResult").innerHTML = ""; 
+		}
+		function timer1()
+		{
+			if(firstTime)
+			{
+				mSec = parseInt(document.getElementById('milliSeconds').value);
+				if(mSec>0 && mSec<=500)
+					firstTime=false;
+			}
+			if(mSec>0 && mSec<=500)
+			{
+				document.getElementById('startButton').removeEventListener('click', timer1, false);
+				if(counter1++ >=20)
+					counter1=0;
+		    	document.getElementById('timer1Display').innerHTML = counter1;
+	    		timer1Timeout = setTimeout(function(){timer1()}, mSec);
+	    		reset=true;
+			}
+			else
+			{
+				alert("You must enter an increment between 1 and 500 milliseconds");
+			}
+		}
+
+		function stopT1()
+		{
+			clearTimeout(timer1Timeout);
+		}
+
+		function timer2()
+		{
+			if(mSec>0 && mSec<=500)
+			{
+				document.getElementById('startButton').removeEventListener('click', timer2, false);
+				if(counter2++ >=20)
+					counter2=0;
+		    	document.getElementById('timer2Display').innerHTML = counter2;
+	    		timer2Timeout = setTimeout(function(){timer2()}, mSec);				
+			}
+    	}
+
+    	function stopT2()
+    	{
+    		clearTimeout(timer2Timeout);
+
+    		var skill;
+    		var diff = Math.abs(counter2-counter1);
+    		if(diff <= 3)
+    			skill="  Very Impressive!";
+    		else if(diff>3 && diff<7)
+    			skill=" Not bad.  Try again!";
+    		else if(diff>=7 && diff<13)
+    			skill=" Little slow today, are we?";
+    		else if(diff>=13)
+    			skill = " Ouch!  That hurts!";
+    		var outputStr="You missed by a count of " + diff + "!" + skill;
+    		document.getElementById("outputResult").innerHTML = outputStr; 
+    	}
+	</script>	
+</head>
+
+<body>
+	<h1>Test Your Reflexes!</h1>
+	<h2>Enter the number of millseconds from 1/1000 of a second to half a second (1-500), you would like as the timing between increments of the counter.  The counters count from 0-20 repeatedly.  Stop timer one with the "Stop Timer One!" button.  Try to stop timer 2 at the same count.  Click "Reset Timers" to start over.</h2>
+	<br/>
+	<span class="getInput">Enter between 1 and 500 milliseconds to increment counters: </span>
+	<input type="text" class="inputBox" id="milliSeconds">
+	<br/><br/><br/>
+	<div class="startButtonDiv" style="text-align:center">
+		<button type="button" id="startButton" style="font-size:20px">Start Timers</button>
+	</div>
+	<br/><br/>
+	<div id="timer1Display" class="timer1">T1</div>
+	<div id="timer2Display" class="timer2">T2</div>
+	<div class="stopTimer1Div">
+		<button type="button" id="stopTimer1" style="font-size:20px">Stop Timer One!</button>
+	</div>
+	<div class="stopTimer2Div">
+		<button type="button" id="stopTimer2" style="font-size:20px">Stop Timer Two!</button>
+	</div>
+	<br/>
+	<div class="resetDiv" style="text-align:center; clear:both; margin-top:120px">
+		<button type="button" id="resetButton" style="font-size:20px">Reset Timers</button>
+	</div>
+	<br/><br/>
+	<div class='results' style="text-align:center">
+		<p id="outputResult" style="font-size: 25px; color:red"></p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+body {
+	margin:0px;
+	padding:0px;
+	font-family:verdana, arial, helvetica, sans-serif;
+	color:#333;
+	background-color:white;
+	}
+	
+h1
+{
+    margin:0px 0px 15px 0px;
+    padding:0px;
+    font-size:40px;
+    line-height:28px;
+    font-weight:900;
+    color:#ccc;
+}
+	
+p, li
+{
+    font:30px/30px verdana, arial, helvetica, sans-serif;
+    margin:10px 0px 16px 0px;
+    padding:0px;
+}
+	
+#Content>p {margin:0px; text-indent:0;}
+
+a {
+	color:#09c;
+	font-size:18px;
+	text-decoration:none;
+	font-weight:600;
+	font-family:verdana, arial, helvetica, sans-serif;
+	}
+	
+a:link {color:#09c;}
+
+a:visited {color:#07a;}
+
+a:hover {background-color:#eee;}
+
+#Header
+{
+    font-size:24px;
+    margin:50px 0px 10px 0px;
+    padding:17px 0px 17px 20px;
+    /* For IE5/Win's benefit height = [correct height] + [top padding] + [top and bottom border widths] */
+    height:33px; /* 14px + 17px + 2px = 33px */
+    border-style:solid;
+    border-color:black;
+    border-width:1px 0px; /* top and bottom borders: 1px; left and right borders: 0px */
+    line-height:11px;
+    background-color:#eee;
+}
+
+
+body>#Header {height:14px;}
+
+.formLabels
+{
+    display: inline-block;
+    width: 200px;
+    font-size: 20px;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.fieldsetLogin
+{
+    width: 450px;
+}
+
+.classInput
+{
+    height: 25px;
+    font-size: 20px;
+}
+
+.submitLogin
+{
+    font-size: 25px;
+    margin: 20px 0 0 40px;
+}
+
+.smallLetters
+{
+    font-size: 15px;
+    line-height: 15px;
+    margin-bottom: 0px;
+}
+#Content {
+	margin:0px 210px 50px 10px;
+	padding:10px;
+        width: 1500px;
+	}
+
+#Menu
+{
+    position:absolute;
+    top:100px;
+    right:120px;
+    width:272px;
+    padding:20px;
+    background-color:#eee;
+    border:1px dashed #999;
+    line-height:25px;
+}
+
+/* body>#Menu {width:250px;} */
+
+.error {
+	color:#FF0033;
+	font-size:14px;
+	}
+

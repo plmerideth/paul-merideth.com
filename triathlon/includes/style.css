@@ -1,0 +1,1230 @@
+/* 
+    Created on : Apr 6, 2015, 12:03:01 PM
+    Author     : Paul Merideth
+*/
+
+/* reset browser styles */
+/* 2/24:  This reset overrides all my other CSS settings.  Disabling for now */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/*Begin general CSS */
+@font-face
+{
+    font-family: 'armalite_rifleregular';
+    src: url('../webfonts/armalite_rifle-webfont.eot');
+    src: url('../webfonts/armalite_rifle-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/armalite_rifle-webfont.woff') format('woff'),
+         url('../webfonts/armalite_rifle-webfont.ttf') format('truetype'),
+         url('../webfonts/armalite_rifle-webfont.svg#armalite_rifleregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+html
+{
+    overflow-y: scroll;
+    /* background-color: white; */
+    /* background-image: url(../images/brick-wall.jpg); */
+}
+body
+{
+  
+}
+/* HEADER.HTM */
+.divContainer
+{
+    width: 1800px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: lightgrey;
+    border: 2px solid black;
+    /* background-image: url(../images/prison.jpg); */
+}
+.myHeader
+{
+    /* border-bottom: 2px solid black; */
+    /* border-radius: 10px; */
+    height: 100px;
+    background-color: white;
+    background-image: url(../images/brick-wall.jpg);
+}
+.logo
+{
+    margin: 5px;
+    height: 90px;
+    float: left;
+}
+.headerText
+{
+    font-family: 'armalite_rifleregular';
+    font-size: 50px;
+    float: left;
+    margin-left: 200px;
+    margin-top: 30px;
+    /* background-color: white; */
+}
+.myNav
+{
+    float: left;
+    width: 250px;
+    height: 525px;
+    /* border: 2px solid red; */
+    /* border-radius: 10px; */
+}
+.myNav .homePage, .myNav .routePage, .myNav .registrationPage, .myNav2 .runRoutePage, .divFooterContact .contactPage, .divFooterSitePlan .sitePlanPage, .divFooterResources .resourcesPage
+{
+    color:red;
+    font-weight: bold;
+}
+.myNav .otherPage, .divFooterContact .otherPage, .divFooterSitePlan .otherPage, .divFooterResources .otherPage
+{
+    color:black;
+    font-weight: bold;
+}
+ul.myNavMenu
+{
+  list-style-type: none;
+  padding-left: 0; /*Broswers indent list items from left.  Remove excess space */
+  margin-left: 20px;  /*Broswers indent list items from left.  Remove excess space */
+  margin-top: 20px;
+}
+ul.myNavMenu a
+{
+    display: block;
+    width: 20px;
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: 35px;
+}
+ul.myNavMenu a:hover
+{
+    color: red;
+}
+.clearMyDivs
+{
+    clear: both;
+}
+/* END HEADER.HTM */
+
+/* MAIN.INC.PHP */
+.divMain
+{
+    height: 720px;
+    /* background-image: url(../images/brick-wall.jpg); */
+    background-image: url(../images/prison.jpg);
+}
+.divImageTopLeft
+{
+    float: left;
+    width: 530px
+}
+.imageMain
+{
+    display: block;
+    width: 528px;
+    border: 2px solid black;
+    margin:auto;
+}
+.divMainTextTop
+{
+    width: 1020px;
+    float: left;
+}
+.divMainTextTop h1
+{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+}
+.divMainTextTop h2
+{
+    font-size:  25px;
+    margin-left: 50px;
+}
+.divButton
+{
+    width: 312px;
+    margin: auto;
+    margin-top: 100px
+}
+.divMainTextTop #button
+{
+    border: 4px solid black;
+    font-size: 45px;
+    background-image: url(../images/brick-wall.jpg);
+    /* background-color: #EACDC5;   #4A6B8E */
+    border: 1px solid #FFF;
+    border-radius: 10px;
+    /* box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, .4), 0 1px 3px #333333; */
+    padding: 12px 20px 14px 20px;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+}
+a#button:hover
+{
+    /*Make border same color as background to appear to disappear without changing button dimensions*/
+    border: 4px solid black;
+    border-radius: 10px;
+    background-color: red;
+    /*box-shadow creates glow with hover*/
+    box-shadow: 0 0 50px red;
+    color: #000;
+}
+.mainTextTop
+{
+    font-size: 25px;
+    margin: 20px 20px 20px 50px;
+}
+/* END MAIN.INC.PHP */
+
+/* ROUTE.INC.PHP */
+.divRoute
+{
+    height: 2550px;
+    background-image: url(../images/prison.jpg);
+}
+#map-canvas
+{
+    margin: auto;
+    margin-top: 20px;
+    width: 1000px;
+    height: 600px;
+}
+.divRouteMap
+{
+    width: 1000px;
+    margin-top: 20px;
+    margin: auto;
+}
+.divRouteMap h1
+{
+    font-size: 50px;
+    text-align: center;
+}
+.divRouteMap h2
+{
+    font-size: 40px;
+    text-align: center;
+}
+.imgRouteMap
+{
+    margin-top: 20px;
+    width: 1000px;
+}
+.routeText
+{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 25px;
+}
+.myNav2
+{
+    margin: auto;
+    width: 600px;
+    border: 2px solid black;
+}
+.myNav2 a
+{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    margin: 5px 30px 5px 30px;
+}
+.myNav2 a:hover
+{
+    color: red;
+    font-weight: bold;
+}
+ul.myNav2Menu
+{
+  list-style-type: none;
+  padding-left: 0; /*Broswers indent list items from left.  Remove excess space */
+  margin-left: 20px;  /*Broswers indent list items from left.  Remove excess space */
+  margin-top: 20px;
+}
+.myNav2Menu li
+{
+    display: inline;
+}
+.routeText
+{
+    font-size: 25px;
+    text-align: left;
+}
+/* END ROUTE.INC.PHP */
+
+/* RUNROUTE.INC.PHP */
+.divRunRoute
+{
+    height: 2750px;
+    background-image: url(../images/prison.jpg);
+}
+.divRunMaps
+{
+    width: 1000px;
+    margin: auto;
+}
+.divRunMaps h1
+{
+    font-size: 50px;
+    text-align: center;
+}
+/* END RUNROUTE.INC.PHP */
+
+/* SWIMROUTE.INC.PHP */
+.divSwimRoute
+{
+    height: 625px;
+    background-image: url(../images/prison.jpg);
+}
+.divSwimMaps
+{
+    width: 1000px;
+    margin: auto;
+}
+.divSwimMaps h1
+{
+    font-size: 50px;
+    text-align: center;
+}
+/* END SWIMROUTE.INC.PHP */
+
+/* BIKEROUTE.INC.PHP */
+.divBikeRoute
+{
+    height: 2400px;
+    background-image: url(../images/prison.jpg);
+}
+.divBikeMaps
+{
+    width: 1000px;
+    margin: auto;
+}
+.divBikeMaps h1
+{
+    font-size: 50px;
+    text-align: center;
+}
+/* END BIKEROUTE.INC.PHP */
+
+/* REGISTRATION.INC.PHP */
+.divRegistration
+{
+    height: 675px;
+    background-image: url(../images/prison.jpg);
+}
+.divRegistrationForm
+{
+    width: 1250px;
+    margin: auto;
+}
+.divRegistrationForm h1
+{
+    font-size: 50px;
+    text-align: center;
+}
+
+.divRegistrationForm h2
+{
+    font-size: 35px;
+    text-align: center;
+}
+.inputName, .inputAddress, .inputCity, .inputState, .inputZip
+{
+    border: 1px solid black;
+    font-size: 25px;
+}
+
+.registrationName, .registrationAddress, .registrationCity, .registrationState, .registrationZip
+{
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    width: 300px;
+    font-size: 25px;
+}
+
+.submitButton
+{
+    font-size: 25px;
+    margin-top: 20px;
+}
+.registrationSubmit
+{
+    display: inline-block;
+    margin-left: 310px;
+}
+/* END REGISTRATION.INC.PHP */
+
+/* CONTACT.INC.PHP */
+.divContact
+{
+    height: 600px;
+    background-image: url(../images/prison.jpg);
+}
+.divContactForm
+{
+    width: 1250px;
+    margin: auto;
+}
+.divContactForm h1
+{
+    font-size: 50px;
+    text-align: center
+}
+.contactName, .contactEmail
+{
+    display: inline-block;
+    text-align: right;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    width: 300px;
+    font-size: 25px;
+}
+
+.inputName, .inputEmail
+{
+    border: 1px solid #4A6B8E;
+    font-size: 25px;
+}
+
+.contactComments
+{
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    width: 300px;
+    float: left;
+    font-size: 25px;
+}
+
+.textareaComments
+{
+    border: 1px solid black;
+    font-size: 25px;
+}
+
+.contactSubmit
+{
+    display: inline-block;
+    margin-left: 310px;
+}
+.submitButton
+{
+    font-size: 25px;
+}
+/* END CONTACT.INC.PHP */
+
+/* SITEPLAN.INC.PHP */
+.divSitePlan
+{
+    height: 5000px;
+    background-image: url(../images/prison.jpg);
+}
+.sitePlanContent
+{
+    width: 1400px;
+    float: left;
+    margin: 20px 30px 0 30px
+}
+.docTitle
+{
+    font-size: 50px;
+    text-align: center;
+    color: red;
+}
+.divSitePlan h1
+{
+    font-size: 40px;
+}
+.divSitePlan h2
+{
+    font-size: 30px;
+    color: red;
+    font-weight: bold;
+}
+.divSitePlan .mainText
+{
+    font-size: 20px;
+}
+.divSitePlan li
+{
+    margin-left: 20px;
+    font-size: 20px;
+}
+.divWireframe
+{
+    margin-left: 200px;
+    width: 800px;
+}
+.imgWireframe
+{
+    display: block;
+    width: 1000px;
+    margin: auto;
+}
+.divSitePlan table, th, td
+{
+    margin: 15px;
+    padding: 5px;
+    border: 2px solid black;
+    background-color: #ECD1C8;
+    font-size: 20px;
+}
+.boldText
+{
+    font-weight: bold;
+}
+/* END SITEPLAN.INC.PHP */
+
+/* RESOURCES.INC.PHP */
+.divResources
+{
+    height: 600px;
+    background-image: url(../images/prison.jpg);
+}
+/* END RESOURCES.INC.PHP */
+
+/* THANKYOU.INC.PHP */
+.divThankYou
+{
+    height: 600px;
+    background-image: url(../images/prison.jpg);
+}
+.thankYou
+{
+    width: 1000px;
+    margin: auto;
+    font-size: 35px;
+}
+.thankYou h1
+{
+    margin-top: 100px;
+    font-size: 50px;
+    text-align: center;
+}
+.thankYou h2
+{
+    font-size: 40px;
+    text-align: center;
+}
+/* END THANKYOU.INC.PHP */
+
+
+/* FOOTER.HTM */
+.divFooter
+{
+    height: 100px;
+    /* border-top: 2px solid black; */
+    background-image: url(../images/brick-wall.jpg);
+}
+.divFooter a
+{
+    font-size: 35px;
+    text-decoration: none;
+}
+.divFooter a:hover
+{
+    color: red;
+}
+.divFooterLeft
+{
+    margin: 20px 0 0 20px;
+    float: left;
+    width: 350px;
+}
+.classCopyright
+{
+    font-size: 20px;
+}
+.className
+{
+    font-size: 20px;
+}
+.divFooterContact
+{
+    float: left;
+    width: 150px;
+    margin: 30px 0 0 400px;
+}
+.divFooterSitePlan
+{
+    float: left;
+    width: 150px;
+    margin: 30px 0 0 200px;
+}
+.divFooterResources
+{
+    float: left;
+    width: 150px;
+    margin: 30px 0 0 200px;
+}
+/* END FOOTER.HTM */
+
+
+/* Begin CSS for tables */
+@media all and (min-width: 481px) and (max-width: 1024px)
+{
+/* HEADER.HTM */
+    .divContainer
+    {
+        width: 800px;
+    }
+    .myHeader
+    {
+        height: 60px;
+    }
+    .logo
+    {
+        height: 50px;
+    }
+    .headerText
+    {
+        font-size: 25px;
+        margin-top: 15px;
+        margin-left: 100px;
+    }
+    .myNav
+    {
+        width: 175px;
+        height: 260px;
+    }
+    ul.myNavMenu a
+    {
+        font-size: 20px;
+        width: 10px;
+    }
+/* END HEADER.HTM */
+
+/* MAIN.INC.PHP */
+    .divMain
+    {
+        height: 354px;
+    }
+    .divImageTopLeft
+    {
+        width: 260px;
+    }
+    .imageMain
+    {
+        width: 258px;
+    }
+    .divMainTextTop
+    {
+        width: 365px;
+    }
+    .divMainTextTop h1
+    {
+        font-size: 20px;
+    }
+    .divMainTextTop h2
+    {
+        font-size: 14px;
+    }
+    .divButton
+    {
+        width: 180px;
+        margin-top: 0;
+    }
+    .divMainTextTop #button
+    {
+        font-size: 25px;
+        padding: 6px 10px 7px 10px;
+    }
+    .mainTextTop
+    {
+        font-size: 12px;
+    }
+/* END MAIN.INC.PHP */
+
+/* ROUTE.INC.PHP */
+    .divRoute
+    {
+        height: 2200px;
+    }
+    #map-canvas
+    {
+        width: 600px;
+    }
+    .divRouteMap
+    {
+        width: 625px;
+        float:left;
+    }
+    .divRouteMap h1
+    {
+        font-size:  30px;
+    }
+    .divRouteMap h2
+    {
+        font-size: 20px;
+    }
+    .myNav2
+    {
+        width: 450px;
+    }
+    .myNav2 a
+    {
+        font-size: 12px;
+    }
+    .imgRouteMap
+    {
+        width: 600px;
+    }
+/* END ROUTE.INC.PHP */
+
+/* RUNROUTE.INC.PHP */
+    .divRunRoute
+    {
+        height: 1800px;
+    }
+    .divRunMaps
+    {
+        width: 600px;
+        float: left;
+    }
+    .divRunMaps h1
+    {
+        font-size:  30px;
+    }
+/* END RUNROUTE.INC.PHP */
+
+/* SWIMROUTE.INC.PHP */
+    .divSwimRoute
+    {
+        height: 390px;
+    }
+    .divSwimMaps
+    {
+        width: 600px;
+        float: left;
+    }
+    .divSwimMaps h1
+    {
+        font-size:  30px;
+    }
+/* END SWIMROUTE.INC.PHP */
+
+/* BIKEROUTE.INC.PHP */
+    .divBikeRoute
+    {
+        height: 1510px;
+    }
+    .divBikeMaps
+    {
+        width: 600px;
+        float: left;
+    }
+    .divBikeMaps h1
+    {
+        font-size:  30px;
+    }
+/* END BIKEROUTE.INC.PHP */
+
+/* REGISTRATION.INC.PHP */
+    .divRegistration
+    {
+        height: 450px;
+    }
+    .divRegistrationForm
+    {
+        width: 600px;
+        float: left;
+    }
+    .divRegistrationForm h1
+    {
+        font-size: 30px;
+    }
+    .divRegistrationForm h2
+    {
+        font-size: 20px;
+    }
+    .inputName, .inputAddress, .inputCity, .inputState, .inputZip
+    {
+        font-size: 14px;
+    }
+    .registrationName, .registrationAddress, .registrationCity, .registrationState, .registrationZip
+    {    
+        margin-right: 5px;
+        margin-bottom: 10px;
+        width: 150px;
+        font-size: 14px;
+    }
+    .submitButton
+    {
+        font-size:  18px;
+    }
+/* END REGISTRATION.INC.PHP */
+
+/* CONTACT.INC.PHP */
+    .divContact
+    {
+        height: 325px;
+    }
+    .divContactForm
+    {
+        width: 600px;
+        float: left;
+    }
+    .divContactForm h1
+    {
+        font-size: 30px;
+    }
+    .contactName, .contactEmail
+    {    
+        margin-right: 5px;
+        margin-bottom: 10px;
+        width: 150px;
+        font-size: 14px;
+    }
+    .contactComments
+    {
+        font-size: 14px;
+        width:  150px;
+        margin-right: 5px;
+    }
+    .textareaComments
+    {
+        font-size: 14px;
+        width: 235px;
+        height: 100px;
+    }
+    .inputName, .inputEmail
+    {
+        font-size: 14px;
+    }
+    .contactSubmit
+    {
+        margin-left: 155px;
+    }
+/* END CONTACT.INC.PHP */
+
+/* THANKYOU.INC.PHP */
+.divThankYou
+{
+    height: 350px;
+}
+.thankYou
+{
+    width: 600px;
+    font-size: 20px;
+}
+.thankYou h1
+{
+    font-size: 30px;
+}
+.thankYou h2
+{
+    font-size: 20px;
+}
+/* END THANKYOU.INC.PHP */
+
+/* SITEPLAN.INC.PHP */
+    .divSitePlan
+    {
+        height: 6000px;
+    }
+    .sitePlanContent
+    {
+        width: 560px;
+    }
+    .divWireframe
+    {
+        width: 500px;
+        margin-left: 25px;
+    }
+    .imgWireframe
+    {
+        width: 480px;
+    }
+    .imgSiteLogo
+    {
+        width: 450px;
+    }
+/* END SITEPLAN.INC.PHP */
+
+
+/* FOOTER.HTM */
+    .divFooter
+    {
+        height: 50px;
+    }
+    .divFooter a
+    {
+        font-size: 20px;
+    }
+    .divFooterLeft
+    {
+        margin: 10px 0 0 10px;
+        width: 200px;
+    }
+    .classCopyright
+    {
+        font-size: 12px;
+    }
+    .className
+    {
+        font-size: 12px;
+    }
+    .divFooterContact
+    {
+        width: 75px;
+        margin: 15px 0 0 125px;
+    }
+    .divFooterSitePlan
+    {
+        width: 85px;
+        margin: 15px 0 0 150px;
+    }
+/* END FOOTER.HTM */
+}
+
+/* Begin CSS for smartphones */
+@media all and (max-width: 480px)
+{
+/* HEADER.HTM */
+    .divContainer
+    {
+        width: 400px;
+    }
+    .myHeader
+    {
+        height: 40px;
+    }
+    .logo
+    {
+        height: 30px;
+    }
+    .headerText
+    {
+        font-size: 12px;
+        margin-top: 5px;
+        margin-left: 50px;
+    }
+    .myNav
+    {
+        width: 95px;
+        height: 160px;
+    }
+    ul.myNavMenu a
+    {
+        font-size: 12px;
+        width: 5px;
+    }
+/* END HEADER.HTM */
+
+/* MAIN.INC.PHP */
+    .divMain
+    {
+        height: 354px;
+    }
+    .divImageTopLeft
+    {
+        width: 100px;
+    }
+    .imageMain
+    {
+        width: 98px;
+    }
+    .divMainTextTop
+    {
+        width: 200px;
+    }
+    .divMainTextTop h1
+    {
+        font-size: 12px;
+    }
+    .divMainTextTop h2
+    {
+        font-size: 8px;
+    }
+    .divButton
+    {
+        width: 90px;
+        margin-top: 0;
+    }
+    .divMainTextTop #button
+    {
+        font-size: 12px;
+        padding: 3px 5px 4px 5px;
+    }
+    .mainTextTop
+    {
+        font-size: 8px;
+    }
+/* END MAIN.INC.PHP */
+
+/* FOOTER.HTM */
+    .divFooter
+    {
+        height: 50px;
+    }
+    .divFooter a
+    {
+        font-size: 10px;
+    }
+    .divFooterLeft
+    {
+        margin: 10px 0 0 10px;
+        width: 100px;
+    }
+    .classCopyright
+    {
+        font-size: 8px;
+    }
+    .className
+    {
+        font-size: 8px;
+    }
+    .divFooterContact
+    {
+        width: 45px;
+        margin: 15px 0 0 50px;
+    }
+    .divFooterSitePlan
+    {
+        width: 45px;
+        margin: 15px 0 0 75px;
+    }
+/* END FOOTER.HTM */
+
+/* ROUTE.INC.PHP */
+    .divRoute
+    {
+        height: 1675px;
+    }
+    .divRouteMap
+    {
+        width: 290px;
+        clear: left;
+    }
+    .divRouteMap h1
+    {
+        font-size: 30px;
+    }
+    .divRouteMap h2
+    {
+        font-size: 20px;
+    }
+    .myNav2
+    {
+        width: 210px;
+    }
+    .myNav2 a
+    {
+        font-size: 12px;
+        margin: 5px 2px;
+    }
+    .imgRouteMap
+    {
+        width: 290px;
+    }
+    .routeText
+    {
+        font-size:  14px;
+    }
+    #map-canvas
+    {
+        width: 290px;
+        height: 370px;
+    }
+/* END ROUTE.INC.PHP */
+
+/* RUNROUTE.INC.PHP */
+    .divRunRoute
+    {
+        height: 1200px;
+    }
+    .divRunMaps
+    {
+        width: 290px;
+        clear:left;
+    }
+    .divRunMaps h1
+    {
+        font-size: 25px;
+    }
+/* END RUNROUTE.INC.PHP */
+
+/* SWIMROUTE.INC.PHP */
+    .divSwimRoute
+    {
+        height: 330px;
+    }
+    .divSwimMaps
+    {
+        width: 290px;
+        clear:left;
+    }
+    .divSwimMaps h1
+    {
+        font-size: 25px;
+    }
+/* END SWIMROUTE.INC.PHP */
+
+/* BIKEROUTE.INC.PHP */
+    .divBikeRoute
+    {
+        height: 1100px;
+    }
+    .divBikeMaps
+    {
+        width: 290px;
+        clear:left;
+    }
+    .divBikeMaps h1
+    {
+        font-size: 25px;
+    }
+/* END BIKEROUTE.INC.PHP */
+
+/* REGISTRATION.INC.PHP */
+    .myNav
+    {
+        height: 190px;
+    }
+    .divRegistrationForm
+    {
+        width: 390px;
+        clear: left;
+    }
+    .divRegistrationForm h1
+    {
+        font-size: 30px;
+    }
+    .divRegistrationForm h2
+    {
+        font-size: 20px;
+    }
+    .registrationName, .registrationAddress, .registrationCity, .registrationState, .registrationZip
+    {
+        font-size: 14px;
+        width: 60px;
+    }
+    .inputName, .inputAddress, .inputCity, .inputState, .inputZip
+    {
+        font-size: 14px;
+    }
+    .submitButton
+    {
+        font-size: 14px;
+    }
+    .registrationSubmit
+    {
+        margin-left: 70px;
+    }
+/* END REGISTRATION.INC.PHP */
+
+/* CONTACT.INC.PHP */
+    .divContact
+    {
+        height: 550px;
+    }
+    .divContactForm
+    {
+        width: 390px;
+        clear: left;
+    }
+    .divContactForm h1
+    {
+        font-size: 30px;
+    }
+    .contactName, .contactEmail
+    {
+        font-size: 14px;
+        width: 120px;
+    }
+    .inputName, .inputEmail
+    {
+        font-size: 14px;
+    }
+    .contactComments
+    {
+        font-size: 14px;
+        width: 120px;
+    }
+    .textareaComments
+    {
+        font-size: 14px;
+        width: 233px;
+        height: 100px;
+    }
+    .contactSubmit
+    {
+        margin-left: 140px;
+    }
+/* END CONTACT.INC.PHP */
+
+/* SITEPLAN.INC.PHP */
+    .divSitePlan
+    {
+        height: 4800px;
+    }
+    .sitePlanContent
+    {
+        width: 390px;
+        margin: 0 5px;
+    }
+    .docTitle
+    {
+        font-size: 30px;
+    }
+    .divSitePlan h1
+    {
+        font-size: 20px;
+    }
+    .divSitePlan h2
+    {
+        font-size: 15px;
+    }
+    .divSitePlan .mainText
+    {
+        font-size: 14px;
+    }
+    .divSitePlan table, th, td
+    {
+        font-size: 14px;
+    }
+    .divWireframe
+    {
+        width: 390px;
+        margin: 0;
+    }
+    .imgWireframe
+    {
+        width: 390px;
+    }
+    .divSitePlan li
+    {
+        font-size: 14px;
+    }
+    .divSiteLogo
+    {
+        width: 390px;
+    }
+    .imgSiteLogo
+    {
+        width: 390px;
+    }
+    .boldText
+    {
+        font-size: 14px;
+    }
+/* END SITEPLAN.INC.PHP */
+}
