@@ -10,10 +10,10 @@
 	<a href="http://www.paul-merideth.info">
             My Resume
 	</a>
-        <a href="index.php?p=teaching" title="Teaching Presentation" class="teachingPresentation">
+        <a href=<?php echo (!isset($_SESSION['first_name'])) ? 'index.php?p=mustLogin' : 'index.php?p=teaching';?> title="Teaching Presentation" class="teachingPresentation">
             Teaching Presentation
         </a>
-        <a href="index.php?p=sitePlan" title="My Site Plan Page" class="sitePlan">
+        <a href=<?php echo (!isset($_SESSION['first_name'])) ? 'index.php?p=mustLogin' : 'index.php?p=sitePlan';?> title="My Site Plan Page" class="sitePlan">
             Site Plan
         </a>
     </div>

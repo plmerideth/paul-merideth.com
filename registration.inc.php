@@ -1,8 +1,14 @@
-<?php #Script 18.6, register.php, pg 576
-	require('../includes-registration/config.inc.php');
-	$page_title="Register";
-	include('../includes-registration/header.html');
-	/*
+<?php    
+    if(!defined('BASE_URL'))
+    {
+        require('includes/config.inc.php');
+        //Redirect to home page
+        $url=BASE_URL . 'index.php';
+        header("Location: $url");
+        exit;
+    }
+    
+  	/*
 	 * Taken from Script 11.1, IMemail.php, which I built to use InMotion's Email server with PHPMailer.
 	 * Email sent from admin@paul-merideth.info.  Using InMotion Email server.
 	 */
@@ -53,7 +59,7 @@
 		}
 		else
 		{
-			echo '<p class="error">Please enter your first name!</p>';
+			echo '<p class="error">ERROR:  Please enter your first name!</p>';
 		}
 		
 		//Check last name.  Same expr as first, except up to 40 chars
@@ -63,7 +69,7 @@
 		}
 		else
 		{
-			echo '<p class="error">Please enter your last name!</p>';
+			echo '<p class="error">ERROR:  Please enter your last name!</p>';
 		}			 
 	
 		//Validate Email address
@@ -73,7 +79,7 @@
 		}
 		else
 		{
-			echo '<p class="error">Please enter a valid Email address!</p>';
+			echo '<p class="error">ERROR:  Please enter a valid Email address!</p>';
 		}
 
 		//Validate the passwords
@@ -85,12 +91,12 @@
 			}
 			else
 			{
-				echo '<p class="error">Your password did not match the confirmed password!</p>';
+				echo '<p class="error">ERROR:  Your password did not match the confirmed password!</p>';
 			}
 		}
 		else
 		{
-			echo '<p class="error">Please enter a valid password!</p>';
+			echo '<p class="error">ERROR:  Please enter a valid password!</p>';
 		}
 
 		//If form passed every test, check for unique email address
@@ -113,7 +119,7 @@
 				if(mysqli_affected_rows($dbc)==1)
 				{                    
                     $body = $fn . ' ' . $ln . " has requested registration, approval needed.  If approved, please click on this link:\n\n";
-					$body .= BASE_URL . 'approve.php?x=' . urlencode($e) . "&y=$a";
+					$body .= BASE_URL . 'approve.inc.php?x=' . urlencode($e) . "&y=$a";
                     $sender_name = $fn . ' ' . $ln;
 
                     /*
@@ -126,7 +132,7 @@
                     mysqli_close($dbc);
                     echo '<h1>Thank you!</h1><br/><br/>';
                     echo '<h3>Your request for registration has been received.  Upon approval, you will be sent an Email with a link to activate your account.</h3>';
-					include('../includes-registration/footer.html');
+					//include('../includes/footer.htm');
 					exit();
                    }
                    else
@@ -134,7 +140,7 @@
                     echo '<p>Mail send failed.</p>';
                     mysqli_close($dbc);
                     echo '<p>DB closed-message fail</p>';
-                    include('../includes-registration/footer.html');
+                    //include('../includes/footer.htm');
                     exit();
 					/*  Uncomment for debugging
 					echo 'Message cound not be sent';
@@ -144,17 +150,17 @@
 				}
 				else //Print errors if INSERT INTO users query did not run ok
 				{
-					echo '<p class="error">You could not be registered due to a system error.  We apologize for any inconvenience.</p>';
+					echo '<p class="error">ERROR:  You could not be registered due to a system error.  We apologize for any inconvenience.</p>';
 				}
 			}
 			else
 			{
-				echo '<p class="error">That email address has already been registered.  If you have forgotten your password, use the link at right to have your password sent to you.</p>';
+				echo '<p class="error">ERROR:  That email address has already been registered.  If you have forgotten your password, use the link at right to have your password sent to you.</p>';
 			}
 		}
 		else
 		{
-			echo '<p class="error">Please try again.</p>';
+			echo '<p class="error">ERROR:  Please try again.</p>';
 		}
 
 		mysqli_close($dbc);
@@ -162,8 +168,8 @@
 ?>
 
 <!-- Begin HTML form -->
-<h1>Register</h1>
-<form action="register.php" method="post">
+<h1 class="registerForm">Register</h1>
+<form action="index.php?p=registration" method="post">
 	<fieldset class="fieldsetLogin">
         <label for="first_name" class="formLabels"><b>First Name:</b></label>
 			<input type="text" name="first_name" size="20" maxlength="20"
@@ -173,6 +179,7 @@
 			<input type="text" name="last_name" size="20" maxlength="40"
 				value="<?php if(isset($trimmed['last_name'])){echo $trimmed['last_name'];}?>"
 			/>
+            </br>
             <label for="email" class="formLabels"><b>Email Address:</b></label>
 			<input type="text" name="email" size="30" maxlength="60"
 				value="<?php if(isset($trimmed['email'])){echo $trimmed['email'];}?>"
@@ -181,13 +188,12 @@
 			<input type="password" name="password1" size="20" maxlength="20"
 				value="<?php if(isset($trimmed['password1'])){echo $trimmed['password1'];}?>"
 			/>
-            <p class="smallLetters"><small>Use only letters, numbers, and the underscore.  Must be between 4 and 20 characters long.</small></p>
+            <p class="smallLetters"><small>Password uses only letters, numbers, and the underscore.  Must be between 4 and 20 characters long.</small></p>
             <label for="password2" class="formLabels"><b>Confirm password:</b></label>
 			<input type="password" name="password2" size="20" maxlength="20"
 				value="<?php if(isset($trimmed['password2'])){echo $trimmed['password2'];}?>"
 			/>
+            <div align="center"><input type="submit" class="submitLogin" name="submit" value="Register"/></div>
 		</fieldset>
-	<div align="left"><input type="submit" class="submitLogin" name="submit" value="Register"/></div>
+	
 </form>
-
-<?php include('../includes-registration/footer.html');?>

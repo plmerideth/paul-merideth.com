@@ -25,7 +25,18 @@
                 -->
 			</div>
 			<div class='hello'>
-				<h1>Hello Family and Friends!</h1>
+                <?php
+                    if(isset($_SESSION['first_name']))
+                    {
+                        echo "<h1>Hello, {$_SESSION['first_name']}!</h1><br/><br/>";
+                        echo "<p class='mainText'>{$_SESSION['first_name']}, you are now logged into your account.</p><br/>";
+                    }
+                    else
+                    {
+                        echo "<h1>Hello Family and Friends!</h1>";
+                        echo '<h2>Please log in or register as a new user if you do not have an account</h2>';
+                    }
+                ?>
 			</div>
 			<p class="mainText">
 				Welcome to my website!  I decided to create a platform to communicate and share the important and fun stuff from life with family and friends.  So I
@@ -72,7 +83,10 @@
 			</ol>
 
 			<span class="mainSpan">To begin registering, please click</span>
-			<a href="" title="Account Registration Not Activated Yet!"><strong>Request Account</strong></a>
+            <a href="index.php?p=registration" title="Registration Page"
+                   class=<?php echo ($page_title=="Registration Page") ? 'registrationPage' : 'otherPage';?>>Registration</a>
+            
+			<!--<a href="" title="Account Registration Not Activated Yet!"><strong>Request Account</strong></a> -->
 
 			<p class="mainText">Thank you for visiting!</p>
 		</div>

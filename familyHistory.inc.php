@@ -15,6 +15,14 @@
 		header("Location: $url");
 		exit;
 	}
+    
+    //If not logged in, redirect to home page.
+    if(!isset($_SESSION['first_name']))
+    {
+        $url=BASE_URL . 'index.php';
+        header("Location: $url");
+        exit;
+    }    
 
 	if(isset($_GET['f']))
     {

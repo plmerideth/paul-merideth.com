@@ -19,7 +19,7 @@
 	define('BASE_URL', 'http://www.paul-merideth.com/user-registration/');
 
 	//Location of mySQL connection script
-	define('MYSQL', '/home/paulme9/public_html/paul-merideth.com/includes-registration/mysqli_connect.php');
+	define('MYSQL', '/home/paulme9/public_html/paul-merideth.com/includes/mysqli_connect.php');
 
 	//Adjust time zone for PHP 5.1 and greater
 	date_default_timezone_set('America/Denver');

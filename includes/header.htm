@@ -2,7 +2,7 @@
     //Start output buffering & session
     ob_start();
     session_start();
-
+        
     //Check for page title and set to default if not set
     if(!isset($page_title))
     {
@@ -17,9 +17,11 @@
         <meta name="description" content="Paul Merideth Family Website">
         <meta name="keywords" content="paul merideth">
         <meta name="viewport" content="width=device-width">
-        <meta charset="utf-8"/>
-        <link href="includes/style.css" rel="stylesheet" type="text/css" media="screen"/>
-        <link href="includes/styleLarge.css" rel="stylesheet" type="text/css" media="screen">
+        <meta charset="utf-8"/>        
+        //<link href="includes/style.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="/includes/style.css" rel="stylesheet" type="text/css" media="screen"/>        
+        <link href="/includes/styleLarge.css" rel="stylesheet" type="text/css" media="screen">
+        //<link href="includes/styleLarge.css" rel="stylesheet" type="text/css" media="screen">
         <!--
         <link href="includes/style-med.css" rel="stylesheet" type="text/css" media="(min-width:481px) and (max-width: 999px)">
         <link href="includes/style-small.css" rel="stylesheet" type="text/css" media="(max-width: 480px)">
@@ -53,25 +55,83 @@
         <div id="container">
             <header class="myHeader">
                 <span>Paul Merideth</span>
+                <div class="divLogIn">
+                    <?php
+                        //If user logged in, show logout and change password links
+
+                        /* $_SESSION['user_id'] may be coincidentally defined by another application in any
+                        * Firefox session, which causes this if(isset($_SESSION['user_id'])) statement to be
+                        * TRUE without having a valid user logged in and the following if($_SESSION['user_level']
+                        * to fail, causing an error. I added a check of $_SESSION['user_level'] to the if()
+                        * statement to make sure both variable are defined before assuming the current session
+                        * is an active user who is logged in.
+                        */
+
+                        if(isset($_SESSION['user_id']) && $_SESSION['app_id']=='plm_registration')
+                        {
+                            //Logout Menu Choice
+                            $navigation = '<a href="index.php?p=logout" title="Logout Page" class=';                          
+                            $class = ($page_title=="Logout Page") ? 'logoutPage' : 'otherPage';
+                            $navigation .= $class . '>Logout</a>';
+                            echo $navigation;
+                        
+                            //Change Password Menu Choice
+                            $navigation = '<a href="index.php?p=changePW" title="Change Password" class=';                          
+                            $class = ($page_title=="Change Password") ? 'changePasswordPage' : 'otherPage';
+                            $navigation .= $class . '>Change Password</a>';
+                            echo $navigation;                                           
+                            
+                            //If user is admin level, add other links
+                            if($_SESSION['user_level']==1)
+                            {
+                                $navigation = '<a href="index.php?p=manageAccount" title="Manage Account Page" class=';                          
+                                $class = ($page_title=="Manage Account Page") ? 'manageAccountPage' : 'otherPage';
+                                $navigation .= $class . '>Manage Account</a>';
+                                echo $navigation;
+                            }
+                        }
+                        else
+                        {
+                            //New User Registration Menu Choice
+                            $navigation = '<a href="index.php?p=registration" title="Registration Page" class=';                          
+                            $class = ($page_title=="Registration Page") ? 'registrationPage' : 'otherPage';
+                            $navigation .= $class . '>New User Registration</a>';
+                            echo $navigation;
+                            
+                            //Login Menu Choice
+                            $navigation = '<a href="index.php?p=login" title="Login Page" class=';                          
+                            $class = ($page_title=="Login Page") ? 'loginPage' : 'otherPage';
+                            $navigation .= $class . '>Login</a>';
+                            echo $navigation;
+                            
+                            //Retrieve Password Menu Choice
+                            $navigation = '<a href="index.php?p=resetPW" title="Reset Password Page" class=';                          
+                            $class = ($page_title=="Reset Password Page") ? 'resetPWPage' : 'otherPage';
+                            $navigation .= $class . '>Retrieve Password</a>';
+                            echo $navigation;                            
+                        }
+                    ?>
+                </div>
             </header>
             <nav class="myNav">
                 <!-- The PHP code checks the $page_title variable to see which page has been clicked. -->
                 <!-- It sets the class to a unique name for each page, and CSS sets the attributes to show the page that's selected in the main menu -->
+                <!-- href uses PHP to check for login status.  If not logged in, display mustLogIn page. -->
                 <a href="index.php" title="My Home Page"
                    class=<?php echo ($page_title=="Paul Merideth-Home") ? 'homePage' : 'otherPage';?>>Home</a>
 
-                <a href="index.php?p=familyHistory&amp;f=x" title="My Family History Page"
+                <a href=<?php echo (!isset($_SESSION['first_name'])) ? 'index.php?p=mustLogin' : 'index.php?p=familyHistory&amp;f=x;'?> title="My Family History Page"
                    class=<?php echo ($page_title=="Paul Merideth-Family History") ? 'familyHistoryPage' : 'otherPage';?>>Family History</a>
 
-                <a href="index.php?p=spiritual" title="My Spiritual Page"
+                <a href=<?php echo (!isset($_SESSION['first_name'])) ? 'index.php?p=mustLogin' : 'index.php?p=spiritual';?> title="My Spiritual Page"
                    class=<?php echo ($page_title=="Paul Merideth-Spiritual") ? 'spiritualPage' : 'otherPage';?>>Spiritual</a>
                    
-                <a href="index.php?p=travel" title="My Travel Page"
+                <a href=<?php echo (!isset($_SESSION['first_name'])) ? 'index.php?p=mustLogin' : 'index.php?p=travel';?> title="My Travel Page"
                    class=<?php echo ($page_title=="Paul Merideth-Travel") ? 'travelPage' : 'otherPage';?>>Travel</a>
                                  
-                <a href="index.php?p=familySports" title="My Family Sports Page"
+                <a href=<?php echo (!isset($_SESSION['first_name'])) ? 'index.php?p=mustLogin' : 'index.php?p=familySports';?> title="My Family Sports Page"
                    class=<?php echo ($page_title=="Paul Merideth-Family Sports") ? 'familySportsPage' : 'otherPage';?>>Family Sports</a>
                                   
-                <a href="index.php?p=stories" title="My Stories Page"
+                <a href=<?php echo (!isset($_SESSION['first_name'])) ? 'index.php?p=mustLogin' : 'index.php?p=stories';?> title="My Stories Page"
                    class=<?php echo ($page_title=="Paul Merideth-Stories") ? 'storiesPage' : 'otherPage';?>>Stories</a>                 
             </nav>

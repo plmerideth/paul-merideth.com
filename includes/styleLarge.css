@@ -3,7 +3,19 @@ html
 {
     background-color: #808080;
 }    
-    
+.error
+{
+    color: red;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    text-align; center;
+    font-size: 2.05em;
+    font-weight: bold;
+    margin: 20px 10px 10px 20px;
+}
+
 /* HEADER.HTM */
 .myHeader
 {
@@ -21,13 +33,35 @@ html
         color: white;
         text-shadow: 4px 4px 4px #000;
 }
+.divLogIn
+{
+    border-style: solid;
+    border-radius: 10px;
+    margin: 20px 0 0 0;
+    /* width: 475px; */
+    float: right;
+    font-family: "tangerine";
+    background-color: #AA3939;       
+}
+.divLogIn a
+{
+    display: inline;
+    color: #ffffff;
+    font-size: 1.95em;
+    text-decoration: none;
+    padding: 5px;
+}
+.divLogIn a:hover
+{
+    color: #000000;
+}
 .myNav
 {
 	text-align: center;
 	margin-bottom: 10px;
 }
 
-/* This code is used to set the menu text color to black is selected. */
+/* This code is used to set the menu text color to black if selected. */
 /* header.htm sends a parameter with the class set to selected page. All other pages class='otherPage' */
 .myNav .homePage, .myNav .familyHistoryPage, .myNav .spiritualPage, .myNav .travelPage, .myNav .familySportsPage, .myNav .storiesPage
 {
@@ -46,6 +80,28 @@ html
     padding: 5px 15px 5px 15px;
     */
 }
+.divLogIn .registrationPage, .divLogIn .loginPage, .divLogIn .resetPWPage
+{
+    font-family: 'tangerine';
+    margin: 10px 15px 10px 15px;
+    font-size:25px;
+    font-weight: bold;
+    color: #000000;
+    display: inline;
+    text-decoration: none;
+}
+.divLogIn .otherPage
+{
+    font-family: 'tangerine';
+    /* background-color: white; */
+    margin: 10px 15px 10px 15px;
+    font-size:25px;
+    font-weight: bold;
+    color: #ffffff;
+    display: inline;
+    text-decoration: none;    
+}
+
 .myNav .otherPage
 {
     font-family: 'tangerine';
@@ -95,6 +151,85 @@ html
 	width: 1200px;
 }
 /* HEADER.HTM-END */    
+
+/* REGISTRATION.INC.PHP & LOGIN.INC.PHP */
+.registerForm, .loginForm
+{
+    text-align: center;
+}
+.fieldsetLogin
+{
+    font-family: 'Playfair Display';
+    background-color: #AA3939;
+    border-style: solid;
+    border-radius: 10px;
+    color: #ffffff;
+    /* float:left; */
+    width: 500px;
+    margin: auto;        
+}
+.formLabels
+{
+    display: inline-block;
+    width: 250px;
+    margin: 10px;
+    font-size: 20px;
+    text-align: right;
+    margin-top: 10px;
+}
+.smallLetters
+{
+    font-size: 15px;
+    line-height: 15px;
+    width: 300px;
+    margin: auto;
+}
+.submitLogin
+{
+    font-size: 25px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: #ffffff;
+    font-family: 'Playfair Display';
+}
+.submitLogin:hover
+{
+    /*Make border same color as background to appear to disappear without changing button dimensions*/
+    border:2px solid #000000;
+    border-radius: 5px;
+    /*box-shadow creates glow with hover*/
+    box-shadow: 0 0 30px black;
+    color: #000000;
+}
+
+/* END REGISTRATION.INC.PHP & LOGIN.INC.PHP*/
+
+/* ACTIVATE.INC.PHP */
+.activateLogin
+{
+    font-size: 25px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: #aa3939;
+    padding: 5px;
+    font-family: 'Playfair Display';
+    text-decoration: none;
+    color: #ffffff;
+}
+.activateLogin:hover
+{
+    /*Make border same color as background to appear to disappear without changing button dimensions*/
+    border:2px solid #000000;
+    border-radius: 5px;
+    /*box-shadow creates glow with hover*/
+    box-shadow: 0 0 30px black;
+    color: #000000;
+}
+/* END ACTIVATE.INC.PHP */
+
+
 
 /* MAIN.INC.PHP */
 .divWelcomeVideo
@@ -162,6 +297,19 @@ html
     text-align: center;
     font-size: 70px;
     color: #003333;
+}
+.myContent .hello h2
+{
+    font-family: 'tangerine';
+    /* float:left;
+    width: 580px;
+    */
+    margin-right: 20px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 50px;
+    color: #ffffff;
 }
 .myContent ul
 {
@@ -882,6 +1030,27 @@ ul, ol
     margin: 20px;
 }
 /* END STORIES.INC.PHP */
+
+/* MUSTLOGIN.INC.PHP */
+.divMustLogIn
+{
+    width: 1200px;
+    border: 2px solid black;
+    background-color: #AA3939;
+    margin: auto;
+    border-radius: 10px;    
+}
+.divMustLogIn h1
+{
+    margin: 20px;
+    color: #ffffff;
+}
+.divMustLogIn .mainText
+{
+    margin: 20px;
+    color:#FFFFFF;    
+}
+/* END MUSTLOGIN.INC.PHP */
 
 
 /* SITE-PLAN.INC.PHP */

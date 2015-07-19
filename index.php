@@ -21,19 +21,20 @@
 	}
 	else
 	{
-		$p=NULL;
+		$p=null;
 	}
+    
 
-	switch($p)
-	{
-		case 'familyHistory':
-			$page='familyHistory.inc.php';
-			$page_title="Paul Merideth-Family History";
-		break;
-		case 'spiritual':
-			$page='spiritual.inc.php';
-			$page_title="Paul Merideth-Spiritual";
-		break;
+    switch($p)
+    {
+        case 'familyHistory':
+            $page='familyHistory.inc.php';
+            $page_title="Paul Merideth-Family History";
+        break;
+        case 'spiritual':
+            $page='spiritual.inc.php';
+            $page_title="Paul Merideth-Spiritual";
+        break;
         case 'sp1':
             $page='SpiritualPages/sp1.inc.php';
             $page_title="Paul Merideth-Spiritual";
@@ -62,18 +63,18 @@
             $page='SpiritualPages/sp7.inc.php';
             $page_title="Paul Merideth-Spiritual";
         break;
-		case 'travel':
-			$page='travel.inc.php';
-			$page_title="Paul Merideth-Travel";
-		break;
-		case 'familySports':
-			$page='familySports.inc.php';
-			$page_title="Paul Merideth-Family Sports";
-		break;
-		case 'stories':
-			$page='stories.inc.php';
-			$page_title="Paul Merideth-Stories";
-		break;
+        case 'travel':
+            $page='travel.inc.php';
+            $page_title="Paul Merideth-Travel";
+        break;
+        case 'familySports':
+            $page='familySports.inc.php';
+            $page_title="Paul Merideth-Family Sports";
+        break;
+        case 'stories':
+            $page='stories.inc.php';
+            $page_title="Paul Merideth-Stories";
+        break;
         case 'teaching':
             $page='assessments/teaching-presentation.inc.php';
             $page_title="Paul Merideth-Teaching Presentation";
@@ -82,19 +83,47 @@
             $page='assessments/site-plan.inc.php';
             $page_title="Paul Merideth-Site Plan";
         break;
-		default:
-			$page='main.inc.php';
-			$page_title="Paul Merideth-Home";
-		break;
-	}
+        case 'registration':
+            $page="registration.inc.php";
+            $page_title="Registration Page";
+        break;
+        case 'login':
+            $page="login.inc.php";
+            $page_title="Login Page";
+        break;
+        case 'resetPW':
+            $page="forgot_password.inc.php";
+            $page_title="Reset Password Page";
+        break;
+        case 'changePW':
+            $page="change_password.inc.php";
+            $page_title="Change Password Page";
+        break;
+        case 'logout':
+            $page="logout.inc.php";
+            $page_title="Logout Page";
+        break;
+        case 'mustLogin':
+            $page="mustLogIn.inc.php";
+            $page_title="You Must Log In";
+        break;
+        case 'manageAccount':
+            $page="manageAccount.inc.php";
+            $page_title="Manage Account";
+        break;
+        default:
+            $page='main.inc.php';
+            $page_title="Paul Merideth-Home";                
+        break;
+     }
 
 	//Make sure file exists, or set default to main.inc.php
 	if(!file_exists($page))
 	{
-        // echo '<p>The page</p>' . $page . '<p>does not exist</p>';
+        //echo '<p>The page</p>' . $page . '<p>does not exist</p>';
 		$page='main.inc.php';
 		$page_title="Paul Merideth-Home";
-	}
+    }
 
 	include('includes/header.htm');
 	include($page);
