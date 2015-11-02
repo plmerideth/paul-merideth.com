@@ -143,8 +143,8 @@
 ?>
 
 <!-- Begin HTML form -->
-<h1 class="registerForm">Register</h1>
-<form action="index.php?p=registration" method="post">
+<h1 class="registerForm">Manage My Account</h1>
+<form action="index.php?p=manageMyAccount" method="post">
 	<fieldset class="fieldsetLogin">
         <label for="first_name" class="formLabels"><b>First Name:</b></label>
 			<input type="text" name="first_name" size="20" maxlength="20"

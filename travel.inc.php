@@ -29,7 +29,12 @@
     <div class="travel">
         <h1>Travel Page</h1>
         <p class="mainText">
-            Travel images to be added ...
+            Travel images to be added ... in the meantime, please enjoy this Eagles song!
         </p>
+        <div class="divStoriesAudio">
+            <audio class="storiesAudio" controls>
+                <source src="audio/oneofthesenights.mp3" type="audio/mp3">
+            </audio>
+        </div>            
     </div>
 </main>

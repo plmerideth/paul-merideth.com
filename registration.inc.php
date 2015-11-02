@@ -1,3 +1,5 @@
+<!-- registration.inc.php -->
+
 <?php    
     if(!defined('BASE_URL'))
     {
@@ -45,7 +47,7 @@
 	if($_SERVER['REQUEST_METHOD']=='POST')
 	{
 		require(MYSQL);
-		//Run every element in $_POST array thru trim() & assign result to the new $trimmed array
+		//Run every element in $_POST array thru PHP function trim() & assign result to the new $trimmed array
 		$trimmed = array_map('trim', $_POST);
 		$fn = $ln = $e = $p = FALSE; //Assign four new variables to FALSE
 
@@ -195,5 +197,4 @@
 			/>
             <div align="center"><input type="submit" class="submitLogin" name="submit" value="Register"/></div>
 		</fieldset>
-	
 </form>

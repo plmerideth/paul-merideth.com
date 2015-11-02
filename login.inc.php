@@ -37,7 +37,7 @@
 		//If email and pass are both valid, retrieve user info
 		if($e && $p)
 		{            
-			$q="SELECT user_id, first_name, user_level, app_id /* 4-16-15: added app_id to prevent false logged in status */
+			$q="SELECT user_id, first_name, last_name, user_level, app_id /* 4-16-15: added app_id to prevent false logged in status */
 				FROM users 
 				WHERE(email='$e' AND pass=SHA1('$p')) AND active IS NULL"; //active = NULL if account activated
 			$r=mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br />MySQL Error: " . mysqli_error($dbc));

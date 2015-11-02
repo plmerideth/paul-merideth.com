@@ -77,7 +77,9 @@
                 for($i=$iStart, $j=1; $i<=$iEnd; $i++, $j++)
                 {
                     $image="pic" . $i . ".png";
-                    $id="pic" . $j . ".png";
+                    $id="pic" . $j . ".png";                                        
+                    
+                    //echo '<a href="index.php?p=familyHistory&amp;f=' . 'a"> <img src=familyImages/' . $image . ' id=' . $id . '></a>'; // width=\"80px\"
                     echo "<img src=\"familyImages/$image\" id=\"$id\">"; // width=\"80px\"
                 }
             }

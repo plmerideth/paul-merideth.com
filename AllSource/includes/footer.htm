@@ -1,0 +1,33 @@
+<!-- footer.htm -->
+<div class="clearMyDivs"></div>
+<div class="divMyFooter">
+    <div class="divMyFooterLeft">
+        <p class="classCopyright">Copyright &copy; 2014</p>
+        <p class="className">Paul Merideth, All Rights Reserved.</p>
+    </div>
+			
+    <div class="divMyFooterCenter">
+	<a href="http://www.paul-merideth.info">
+            My Resume
+	</a>
+        <a href=<?php echo (!isset($_SESSION['first_name'])) ? 'index.php?p=mustLogin' : 'index.php?p=teaching';?> title="Teaching Presentation" class="teachingPresentation">
+            Teaching Presentation
+        </a>
+        <a href=<?php echo (!isset($_SESSION['first_name'])) ? 'index.php?p=mustLogin' : 'index.php?p=sitePlan';?> title="My Site Plan Page" class="sitePlan">
+            Site Plan
+        </a>
+    </div>
+
+    <div class="divMyFooterRight">
+	<p class="classDesign">Website Design & Development:</p>
+	<p class="myName">Paul Merideth</p>
+    </div>
+</div>
+
+</div> <!-- Close <div id=container> -->
+</body>
+</html>
+
+<?php
+	ob_end_flush();
+?>

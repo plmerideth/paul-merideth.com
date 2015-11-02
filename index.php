@@ -97,7 +97,7 @@
         break;
         case 'changePW':
             $page="change_password.inc.php";
-            $page_title="Change Password Page";
+            $page_title="Change Password";
         break;
         case 'logout':
             $page="logout.inc.php";
@@ -110,6 +110,26 @@
         case 'manageAccount':
             $page="manageAccount.inc.php";
             $page_title="Manage Account";
+        break;
+        case 'manageMyAccount':
+            $page='manageMyAccount.inc.php';
+            $page_title="Manage My Account";
+        break;
+        case 'showAccount':
+            $page='showAccount.inc.php';
+            $page_title="Manage My Account";
+        break;
+        case 'addStory':
+            $page="addStory.inc.php";
+            $page_title="Paul Merideth-Stories";
+        break;
+        case 'editStory':
+            $page="editStory.inc.php";
+            $page_title="Paul Merideth-Stories";
+        break;
+        case 'deleteStory':
+            $page="deleteStory.inc.php";
+            $page_title="Paul Merideth-Stories";
         break;
         default:
             $page='main.inc.php';

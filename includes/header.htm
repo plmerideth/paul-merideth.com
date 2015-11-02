@@ -2,7 +2,38 @@
     //Start output buffering & session
     ob_start();
     session_start();
+
+    /* The deleteAccount.inc.php page does not get called thru index.php.
+    *  This code checks the $_POST array for submission of the page from
+    *  showAccount.inc.php and then sets the $page_title variable so the
+    *  correct class is selected to make the menu choice black
+    */
+    if(isset($_POST['submit']))  //Check for submission of deleteAccount.inc.php
+    {
+        if($_POST['submit']=="Delete Account")
+        {
+            $page_title='Manage My Account';
+        }
         
+        if(isset($_POST['sure']))//Check for form submission from deleteAccount.inc.php
+        {
+          if($_POST['sure']=="No" ||$_POST['sure']=="Yes")
+          {
+            $page_title="Manage My Account";
+          }
+        }
+     
+        if($_POST['submit']=="Submit Story")
+        {
+            $page_title="Paul Merideth-Stories";
+        }
+        
+        if(isset($_POST['storyID']))
+        {
+            $page_title="Paul Merideth-Stories";
+        }
+    }
+    
     //Check for page title and set to default if not set
     if(!isset($page_title))
     {
@@ -17,11 +48,9 @@
         <meta name="description" content="Paul Merideth Family Website">
         <meta name="keywords" content="paul merideth">
         <meta name="viewport" content="width=device-width">
-        <meta charset="utf-8"/>        
-        //<link href="includes/style.css" rel="stylesheet" type="text/css" media="screen"/>
+        <meta charset="utf-8"/>                
         <link href="/includes/style.css" rel="stylesheet" type="text/css" media="screen"/>        
-        <link href="/includes/styleLarge.css" rel="stylesheet" type="text/css" media="screen">
-        //<link href="includes/styleLarge.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="/includes/styleLarge.css" rel="stylesheet" type="text/css" media="screen">        
         <!--
         <link href="includes/style-med.css" rel="stylesheet" type="text/css" media="(min-width:481px) and (max-width: 999px)">
         <link href="includes/style-small.css" rel="stylesheet" type="text/css" media="(max-width: 480px)">
@@ -65,8 +94,15 @@
                         * to fail, causing an error. I added a check of $_SESSION['user_level'] to the if()
                         * statement to make sure both variable are defined before assuming the current session
                         * is an active user who is logged in.
-                        */
+                        */                        
 
+                        /* Use this code to unlock server lockout if a page closes without copying all needed
+                        *  data from database */
+                            //$_SESSION = array();
+                            //session_destroy();
+                            //setcookie(session_name(), '', time()-3600);
+                        
+                                                
                         if(isset($_SESSION['user_id']) && $_SESSION['app_id']=='plm_registration')
                         {
                             //Logout Menu Choice
@@ -81,7 +117,7 @@
                             $navigation .= $class . '>Change Password</a>';
                             echo $navigation;                                           
                             
-                            //If user is admin level, add other links
+                            //If user is admin level 1, add other links
                             if($_SESSION['user_level']==1)
                             {
                                 $navigation = '<a href="index.php?p=manageAccount" title="Manage Account Page" class=';                          
@@ -89,6 +125,15 @@
                                 $navigation .= $class . '>Manage Account</a>';
                                 echo $navigation;
                             }
+                            
+                            //If user is admin level 2 (for PHP Class), add other links
+                            if($_SESSION['user_level']==2)
+                            {
+                                $navigation = '<a href="index.php?p=manageMyAccount" title="Manage My Account Page" class=';                          
+                                $class = ($page_title=="Manage My Account") ? 'manageMyAccountPage' : 'otherPage';
+                                $navigation .= $class . '>Manage My Account</a>';
+                                echo $navigation;
+                            }                            
                         }
                         else
                         {
